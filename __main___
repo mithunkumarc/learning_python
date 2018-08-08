@@ -1,0 +1,39 @@
+Test.py
+
+class Car:
+    def GetOwner(self):
+        print("Owner is ",self._Name)
+    def SetOwner(self,Name):
+        self._Name=Name
+
+
+
+def main():
+    mycar=Car()
+    mycar.SetOwner("Hussein Alrubaye")
+    mycar.GetOwner()
+    Jencar=Car()
+    Jencar.SetOwner("Jen Alrubaye")
+    Jencar.GetOwner()
+    print(__name__) # output : "__main__" if run directly, or else "Test"
+    
+    
+# if this class run directly, __name__ variable assigned with __main__ or else
+# if this class run by other module, __name__ variable will be assigned as 'Test'
+if __name__ == '__main__':
+    main()
+    
+    
+    
+    
+    /*
+    , if the Python interpreter is running that module (the source file) as the main program, 
+    it sets the special __name__ variable to have a value "__main__". 
+    If this file is being imported from another module, __name__ will be set to the module's name.
+    
+    Eg :
+    if __name__ == "__main__":
+      print("Test.py is being run directly")
+    else:
+      print("Test.py is being imported into another module")
+    */
