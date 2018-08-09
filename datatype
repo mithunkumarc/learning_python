@@ -1,0 +1,174 @@
+*********************************Integers*********************************
+In Python 3, there is effectively no limit to how long an integer value can be. 
+Of course, it is constrained by the amount of memory your system has, as are all things, 
+but beyond that an integer can be as long as you need it to be:
+
+>>> print(123123123123123123123123123123123123123123123123 + 1)
+123123123123123123123123123123123123123123123124
+
+Python interprets a sequence of decimal digits without any prefix to be a decimal number:
+by default : number is a decimal number ,for hexa, binary or octal we have to specify, x/b/o correspondingly.
+>>> print(10)
+10
+
+For example:
+#octal 10 equavalent to 8 in decimal
+>>> print(0o10)   => 1 * 8^1 +0 * 8 ^0 = 8+0 = 8
+8
+
+#hexadecimal 16 is equal to 11 in decimal
+>>> print(0x11)       => 1 * 16^1 + 1 * 16^0 =  16+1 = 17
+17
+
+#binary to decimal
+>>> print(0b10)       => 1 * 2^1 + 0 * 2^0   =   2 + 0 = 2
+2
+
+
+The underlying type of a Python integer, irrespective of the base used to specify it, is called int:
+#all format hexa, octal and binary belong to integer
+>>> type(10)
+<class 'int'>
+>>> type(0o10)
+<class 'int'>
+>>> type(0x10)
+<class 'int'>
+
+
+****************************Floating Point Numbers*************************************
+The float type in Python designates a floating-point number. 
+float values are specified with a decimal point. 
+Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation:
+
+>>> 4.2
+4.2
+>>> type(4.2)
+<class 'float'>
+>>> 4.
+4.0
+>>> .2
+0.2
+
+(exponential : used to write too big or too small number : belong to float)
+(positive exponentials : too big number(multipliy), negetive exponentials : too small number(division))
+
+>>> .4e7
+4000000.0
+>>> type(.4e7)
+<class 'float'>
+>>> 4.2e-4
+0.00042
+
+
+
+**********************Complex Numbers*************************
+
+Complex numbers are specified as <real part>+<imaginary part>j. For example:
+
+>>> 2+3j
+(2+3j)
+>>> type(2+3j)
+<class 'complex'>
+
+
+
+**********************String************************************
+Strings are sequences of character data. The string type in Python is called str.
+
+String literals may be delimited using either single or double quotes. 
+All the characters between the opening delimiter and matching closing delimiter are part of the string:
+
+>>> print("I am a string.")
+I am a string.
+>>> type("I am a string.")
+<class 'str'>
+
+>>> print('I am too.')
+I am too.
+>>> type('I am too.')
+<class 'str'>
+
+Note:
+A string in Python can contain as many characters as you wish. 
+The only limit is your machine’s memory resources. A string can also be empty: 
+>>>''
+
+--next--
+
+What if you want to include a quote character as part of the string itself? Your first impulse might be to try something like this:
+
+>>> print('This string contains a single quote (') character.')
+SyntaxError: invalid syntax
+
+solution 1 : print('This string contains a single quote (") character.')
+solution 2 : print('This string contains a single quote (\') character.')
+Note : \ will skip following character
+
+For directory path :
+>>> path = 'c\new'
+>>> print(path)
+c
+ew
+
+Solution : to preseve dir path ,  user \ before \n
+>>> path = 'c\\new'
+>>> print(path)
+c\new
+>>> 
+KeyboardInterrupt
+>>> 
+
+
+--next--
+
+Ordinarily, a newline character terminates line input. 
+So pressing Enter in the middle of a string will cause Python to think it is incomplete:
+
+>>> print('a
+
+SyntaxError: EOL while scanning string literal
+
+To break up a string over more than one line, include a backslash before each newline, and the newlines will be ignored:
+
+>>> print('a\
+... b\
+... c')
+abc
+
+--next--
+
+To include a literal backslash in a string, escape it with a backslash:
+>>> print('foo\bar')
+>>> foar        #\b is backspace deletes a character
+
+solution : user \
+>>> print('foo\\bar')
+foo\bar
+
+--next--
+Raw Strings
+
+A raw string literal is preceded by r or R, which specifies that escape sequences in the associated string are not translated. 
+The backslash character is left in the string:
+
+>>> print('foo\nbar')
+foo
+bar
+>>> print(r'foo\nbar')
+foo\nbar
+
+>>> print('foo\\bar')
+foo\bar
+>>> print(R'foo\\bar')
+foo\\bar
+
+
+
+
+
+
+
+
+
+
+
