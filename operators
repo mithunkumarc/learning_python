@@ -1,0 +1,210 @@
+Arithmetic Operators
+
++ (unary) 	+a 	Unary Positive 	a
+In other words, it doesn’t really do anything. It mostly exists for the sake of completeness, to complement Unary Negation.
++ (binary) 	a + b 	Addition 	Sum of a and b
+- (unary) 	-a 	Unary Negation 	Value equal to a but opposite in sign
+- (binary) 	a - b 	Subtraction 	b subtracted from a
+* 	a * b 	Multiplication 	Product of a and b
+/ 	a / b 	Division 	Quotient when a is divided by b.
+The result always has type float.
+% 	a % b 	Modulus 	Remainder when a is divided by b
+// 	a // b 	Floor Division (also called Integer Division) 	
+    Quotient when a is divided by b, rounded to the next smallest whole number
+** 	a ** b 	Exponentiation 	a raised to the power of b
+
+
+--next--
+
+Comparistion operators 
+
+Comparison Operators
+Operator 	Example 	Meaning 	Result
+== 	a == b 	  Equal to 	True if the value of a is equal to the value of b
+False otherwise
+
+!= 	a != b 	  Not equal to 	True if a is not equal to b
+False otherwise
+
+< 	a < b 	  Less than 	True if a is less than b
+False otherwise
+
+<= 	a <= b 	  Less than or equal to 	True if a is less than or equal to b
+False otherwise
+
+> 	a > b 	  Greater than 	True if a is greater than b
+False otherwise
+
+>= 	a >= b 	  Greater than or equal to 	True if a is greater than or equal to b
+False otherwise
+
+--next--
+
+
+Equality Comparison on Floating-Point Values
+
+floating-point numbers that the value stored internally for a float object may not be precisely.
+For that reason, it is poor practice to compare floating-point values for exact equality. Consider this example:
+
+>>> x = 1.1 + 2.2
+>>> x == 3.3
+False
+
+False! The internal representations of the addition operands are not exactly equal to 1.1 and 2.2, 
+so you cannot rely on x to compare exactly to 3.3.
+
+The preferred way to determine whether two floating-point values are “equal” is to compute 
+whether they are close to one another, 
+given some tolerance. Take a look at this example:
+
+>>> tolerance = 0.00001
+>>> x = 1.1 + 2.2
+>>> abs(x - 3.3) < tolerance
+True
+
+abs() returns absolute value. If the absolute value of the difference between the two numbers is less than the specified tolerance, 
+they are close enough to one another to be considered equal.
+
+--next--
+
+
+******************************logical operators******************************
+
+not 	not x 	True if x is False
+False if x is True
+
+or 	x or y 	True if either x or y is True
+False otherwise
+
+and 	x and y 	True if both x and y are True
+False otherwise
+
+
+--next--
+
+******************************Evaluation of Non boolean values in boolean context*********************
+
+Numeric Value
+
+    A zero value is false.
+    A non-zero value is true.
+
+>>> print(bool(0), bool(0.0), bool(0.0+0j))
+False False False
+
+>>> print(bool(-3), bool(3.14159), bool(1.0+1j))
+True True True
+
+--next--
+
+String
+
+    An empty string is false.
+    A non-empty string is true.
+
+>>> print(bool(''), bool(""), bool(""""""))
+False False False
+
+>>> print(bool('foo'), bool(" "), bool(''' '''))
+True True True
+
+--next--
+
+datastructures : empty - false
+                 non empty - true
+                 
+>>> type([])
+<class 'list'>
+>>> bool([])
+False
+
+>>> type([1, 2, 3])
+<class 'list'>
+>>> bool([1, 2, 3])
+True
+
+
+--next--
+
+The “None” Keyword
+
+None is always false:
+
+>>> bool(None)
+False
+
+
+--next--
+
+if string is an empty string, it is falsy. 
+Evaluation of string or '<default_value>' continues to the next operand, '<default_value>', 
+which is returned and assigned to s:
+
+>>> string = ''
+>>> s = string or '<default_value>'
+>>> s
+'<default_value>'
+
+--next--
+
+**************************************bitwise operators******************************************
+a = 60            # 60 = 0011 1100
+b = 13            # 13 = 0000 1101
+c = 0
+
+c = a & b;        # 12 = 0000 1100
+print("Line 1 - Value of c is ", c)
+
+c = a | b;        # 61 = 0011 1101
+print("Line 2 - Value of c is ", c)
+
+c = a ^ b;        # 49 = 0011 0001  binary xor
+print("Line 3 - Value of c is ", c)
+
+c = ~a;           # -61 = 1100 0011 binary one's complement
+print("Line 4 - Value of c is ", c)
+
+c = a << 2;       # 240 = 1111 0000
+print("Line 5 - Value of c is ", c)
+
+c = a >> 2;       # 15 = 0000 1111
+print("Line 6 - Value of c is ", c)
+
+--next--
+
+********************************id()*************************
+similar to hashcode
+
+>>> x = 1001
+>>> y = 1000 + 1
+>>> print(x, y)
+1001 1001
+
+>>> x == y
+True
+>>> x is y
+False
+* x and y may have same int objects but copies are different
+
+cross check : id(x) and id(y)
+
+>>> id(x)
+60307920
+>>> id(y)
+60307936
+
+example :2 
+>>> a = 'I am a string'
+>>> b = a
+>>> id(a)
+55993992
+>>> id(b)
+55993992
+
+>>> a is b
+True
+>>> a == b
+True
+
+--next--
+
