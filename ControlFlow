@@ -1,0 +1,172 @@
+**************************************if**********************************************
+
+n = int(input('please enter integer :'))
+if n % 2 == 0:
+    print('even')
+    
+************************************if else********************************************
+
+n = int(input('please enter integer :'))
+if n % 2 == 0:
+    print('even')
+else:
+    print('odd')
+
+**********************************elif***************************************************
+same as else if
+
+n = int(input('please enter integer :'))
+if n > 0:
+    print('positive')
+elif n < 0:
+    print('negetive')
+else:
+    print('zero')
+    
+*********************************range******************************************************
+ it generates a list of numbers, which is generally used to iterate over with for loops.
+ 
+ range(5) => generates numbers from 0 to 4, 
+ range(5) equal to range(0,5)
+ 
+ check : print(range(5))
+ 
+ syntax : range(start,stop,step)
+ eg     : range(2,10,2) #output : 2,4,6,8
+ eg     : range(-10, -100, -30) #output :  -10, -40, -70
+ 
+ 
+ *********************************for loop*********************************************
+ 
+ for i in range(5):
+    print(i)
+
+  print('--next--')
+
+  for j in range(5,11):
+    print(j)
+
+  print('--next--')
+
+
+  for k in range(2,10,2):
+    print(k)
+    
+  --next--
+  
+ else with for loop
+ 
+ Ex:1
+ 
+  for i in range(5):
+    print(i)
+else:
+    print('end of loop')
+ # 1,2,3,4,5 end of loop
+ # else will only execute when for loop completes by iterating all steps
+ 
+ Ex:2
+ 
+ for i in range(5):
+    if i == 3:
+        break
+    else:
+        print(i)
+else:
+    print('end of loop')
+ 
+ output : 0,1,2 # else block will not execute
+ 
+ --next--
+ ************************continue statement***************************
+ skips current iteration 
+ 
+ for i in range(10):
+    if i % 2 == 0 :
+        continue    #not printing even numbers
+    else:
+        print(i)
+ 
+ *************************while loop**********************************
+ n = 100
+while n > 1:
+    print(n)
+    n = n - 1   #increment or decrement opertors not allowed in python
+    
+    
+    Example 2 : else will only executes when loop completes all iteration
+    n = 10
+while n > 1:
+    n = n-1
+    print(n)
+else:
+    print('end of while loop')
+
+
+  Example 3 : # else will not execute when while meets break statement 
+  
+  n = 10
+while n > 1:
+    n = n - 1
+    print(n)
+    if n == 5:
+        break
+else:
+    print('end of while loop')
+
+ **************************pass statements****************************
+ The pass statement does nothing. 
+ It can be used when a statement is required syntactically but the program requires no action. For example:
+ 
+ if True:
+    pass
+    print('after pass statement')
+    
+ ***************************function************************************
+ The keyword def introduces a function definition. 
+ It must be followed by the function name and the parenthesized list of formal parameters. 
+ The statements that form the body of the function start at the next line, and must be indented.
+ 
+ Example :
+ #function to print range of numbers
+def printNumbers(start, end):
+    '''documentation string : info about function: ex : prints range of numbers'''
+    for index in range(start, end):
+        print(index)
+
+printNumbers(10,20)
+
+
+
+************************************Default arguments values of funtion *****************************
+def sayHello(message='hello world'):
+    print(message)
+
+sayHello()
+
+--next--
+
+The default values are evaluated at the point of function definition in the defining scope, so that
+
+i = 5
+
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+
+--next--
+
+def sayHello(name, message=', welcome to programming!!'):
+    print(name + message)
+
+sayHello('rajat')
+
+
+--next-- controlflow
+
+
+
+
+
