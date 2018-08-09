@@ -1,0 +1,17 @@
+abs(number) : returns magnitude or positive value
+
+number : Can be integer, a floating point number or a complex number
+
+float = -54.26
+print('Absolute value of integer is:', abs(float))    # output : 54.26
+ 
+# An integer
+int = -94
+print('Absolute value of float is:', abs(int))        #output : 94
+ 
+# A complex number
+complex = (3 - 4j)
+print('Absolute value or Magnitude of complex is:', abs(complex))   # output : 5.0    formulat : square root of 3^2 + (-4)^2
+
+
+--next--python-data-types/
