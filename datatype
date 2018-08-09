@@ -146,6 +146,7 @@ solution : user \
 foo\bar
 
 --next--
+
 Raw Strings
 
 A raw string literal is preceded by r or R, which specifies that escape sequences in the associated string are not translated. 
@@ -162,11 +163,51 @@ foo\bar
 >>> print(R'foo\\bar')
 foo\\bar
 
+--next--
 
+Triple-Quoted Strings
 
+There is yet another way of delimiting strings in Python. 
+Triple-quoted strings are delimited by matching groups of three single quotes or three double quotes.
+Escape sequences still work in triple-quoted strings, 
+but single quotes, double quotes, and newlines can be included without escaping them. 
+* This provides a convenient way to create a string with both single and double quotes in it:
 
+>>> print('''This string has a single (') and a double (") quote.''')
+This string has a single (') and a double (") quote.
 
+--next--
 
+multiline strings : \n will be added by default at the end
+
+>>> print('''
+... first
+... second
+... last''')
+
+first
+second
+last
+
+* to print multiline string in single line use \ symbol at the end of each line
+>>> print('''
+... first\
+... second\
+... last\
+... ''')
+
+firstsecondlast
+
+--next--
+
+*******************************Boolean******************************
+
+Objects of Boolean type may have one of two values, True or False:
+
+>>> type(True)
+<class 'bool'>
+>>> type(False)
+<class 'bool'>
 
 
 
