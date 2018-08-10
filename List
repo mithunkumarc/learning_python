@@ -1,0 +1,84 @@
+Python knows a number of compound data types, used to group together other values. The most versatile is the list, 
+which can be written as a list of comma-separated values (items) between square brackets. 
+Lists might contain items of different types, but usually the items all have the same type.
+
+
+    Lists Are Ordered
+    Lists Can Contain Arbitrary Objects
+    Lists can contain dupliacates
+    List Elements Can Be Accessed by Index
+    Lists Can Be Nested
+    Lists Are Mutable
+    Lists Are Dynamic
+    
+    Ex : 1
+    >>> squares = [1, 4, 9, 16, 25]
+    >>> squares
+    [1, 4, 9, 16, 25]
+
+    Ex : 2
+    list = [1,'monday',True]
+    for i in list:
+        print(i)
+
+    Ex : 3 slice
+    list = [1,3,6,9,12,15]
+    print(list[-3:])    #slice from position -3 to last, : 9,12,15
+    print(list[:3])     #slice from position first to 3 : 1,3,6
+    
+    Ex : 4
+    >>> squares[:]
+    [1, 4, 9, 16, 25]
+    
+    Ex : 5 concatenation
+    print([1,2,3] + [4,5,6])
+    #output :  [1, 2, 3, 4, 5, 6]
+    
+    
+    Ex : replacing an element
+    cubes = [1, 8, 27, 65, 125]
+    cubes[3] = 64  # replace 65 with 64
+    print(cubes)
+    # [1, 8, 27, 64, 125]
+    
+    
+    
+    ex : adding new element to list
+    day = ['monday','tuesday']
+    day.append('wednesday')
+    print(day)
+    # ['monday', 'tuesday', 'wednesday']
+    
+    
+    
+    ex : removing an element    
+    day = ['monday','tuesday']
+    day.remove('monday')
+    print(day)
+    # ['tuesday']
+    
+    Ex : nested list
+    day = ['monday','tuesday']
+    planet = ['moon','mars']
+    all = [day , planet]
+    print(all)
+    # output : [['monday', 'tuesday'], ['moon', 'mars']]
+    print(all[0])
+    # output : ['monday', 'tuesday']
+    
+    
+    
+    Ex : reverse
+    colors = ['red','blue','green','yellow']
+    colors.reverse()
+    print(colors)
+    # ['yellow', 'green', 'blue', 'red']
+    
+    
+    
+    *Note : simple swap example
+    a = 10
+    b = 20
+    a,b = b,a
+    print('a :',a)
+    print('b :',b)
