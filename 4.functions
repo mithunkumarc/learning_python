@@ -24,6 +24,10 @@ def score(matchNumber,team1='india', team2='cuba',day='sunday'):
     print('match number ',matchNumber)
     print('--exit--')
 
+
+invalid : score(matchNumber=20,30)  #error : two values
+          score(30,matchNumber=20)  #error
+
 --exit--
 
 functions can take tuples as argument , parameter must be declared as *argumentslist
@@ -42,7 +46,7 @@ play('cricket','ind','sa','nz',india='bangalore',south_africa='capetown',newZeal
 
 
 
-example 2 : 
+example 2 : error
 def play_foot_ball(sport,**venues,*teams):
     pass
  
