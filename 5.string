@@ -117,4 +117,180 @@ Here are some examples of negative indexing:
 >>> s[-len(s)]
 'f'
 
+*********************************************************************
+String Slicing
 
+string index : ex for : Editor
+
+ E  :  d  :  i  :  t  :  o  : r 
+-6  :  -5 : -4  : -3  : -2 : -1
+ 0  :  1  :  2  :  3  :  4 :  5
+
+Python also allows a form of indexing syntax that extracts substrings from a string, known as string slicing.
+If s is a string, an expression of the form s[m:n] returns the portion of s starting with position m, 
+and up to but not including position n:
+
+>>> s = 'foobar'
+>>> s[2:5]
+'oba'
+
+
+Remember: String indices are zero-based. The first character in a string has index 0. 
+This applies to both standard indexing and slicing.
+
+If you omit the first index, the slice starts at the beginning of the string. Thus, s[:m] and s[0:m] are equivalent:
+
+>>> s = 'foobar'
+
+>>> s[:4]
+'foob'
+>>> s[0:4]
+'foob'
+
+
+Similarly, if you omit the second index as in s[n:], the slice extends from the first index through the end of the string. This is a nice, concise alternative to the more cumbersome s[n:len(s)]:
+
+>>> s = 'foobar'
+
+>>> s[2:]
+'obar'
+>>> s[2:len(s)]
+'obar'
+
+--next--
+
+For any string s and any integer n (0 ≤ n ≤ len(s)), s[:n] + s[n:] will be equal to s:
+
+>>> s = 'foobar'
+
+>>> s[:4] + s[4:]
+'foobar'
+>>> s[:4] + s[4:] == s
+True
+
+
+************************************************************************
+
+String interpolation :
+
+without interpolation :
+>>> n = 20
+>>> m = 25
+>>> prod = n * m
+>>> print('The product of', n, 'and', m, 'is', prod)
+The product of 20 and 25 is 500
+
+But this is cumbersome. To accomplish the same thing using an f-string:
+
+    Specify either a lowercase f or uppercase F directly before the opening quote of the string literal. 
+    This tells Python it is an f-string instead of a standard string.
+    Specify any variables to be interpolated in curly braces ({}).
+
+Recast using an f-string, the above example looks much cleaner:
+
+>>> n = 20
+>>> m = 25
+>>> prod = n * m
+>>> print(f'The product of {n} and {m} is {prod}')
+The product of 20 and 25 is 500
+
+Any of Python’s three quoting mechanisms can be used to define an f-string:
+
+>>> var = 'Bark'
+
+>>> print(f'A dog says {var}!')
+A dog says Bark!
+>>> print(f"A dog says {var}!")
+A dog says Bark!
+>>> print(f'''A dog says {var}!''')
+A dog says Bark!
+
+
+*******************************************************
+s.capitalize()
+
+    Capitalizes the target string.
+
+s.capitalize() returns a copy of s with the first character converted to uppercase and all other characters converted to lowercase:
+
+>>> s = 'foO BaR BAZ quX'
+>>> s.capitalize()
+'Foo bar baz qux'
+
+
+***************************************************************
+s.lower()
+
+    Converts alphabetic characters to lowercase.
+
+s.lower() returns a copy of s with all alphabetic characters converted to lowercase:
+
+>>> 'FOO Bar 123 baz qUX'.lower()
+'foo bar 123 baz qux'
+
+*****************************************************************
+s.swapcase()
+
+    Swaps case of alphabetic characters.
+
+s.swapcase() returns a copy of s with uppercase alphabetic characters converted to lowercase and vice versa:
+
+>>> 'FOO Bar 123 baz qUX'.swapcase()
+'foo bAR 123 BAZ Qux'
+
+*****************************************************************
+
+s.title()
+
+    Converts the target string to “title case.”
+
+s.title() returns a copy of s in which the first letter of each word is converted to uppercase and remaining letters are lowercase:
+
+>>> 'the sun also rises'.title()
+'The Sun Also Rises'
+
+
+********************************************************************
+
+upper()
+
+    Converts alphabetic characters to uppercase.
+
+s.upper() returns a copy of s with all alphabetic characters converted to uppercase:
+
+>>> 'FOO Bar 123 baz qUX'.upper()
+'FOO BAR 123 BAZ QUX'
+
+
+***********************************************************************
+
+s.isdigit()
+
+    Determines whether the target string consists of digit characters.
+
+s.digit() returns True if s is nonempty and all its characters are numeric digits, and False otherwise:
+
+>>> '123'.isdigit()
+True
+>>> '123abc'.isdigit()
+False
+**********************************************************************
+Rules for writing identifiers
+
+    Identifiers can be a combination of letters in lowercase (a to z) or uppercase (A to Z) 
+    or digits (0 to 9) or an underscore (_). Names like myClass, var_1 and print_this_to_screen, all are valid example.
+    
+    An identifier cannot start with a digit. 1variable is invalid, but variable1 is perfectly fine.
+    
+    Keywords cannot be used as identifiers. 
+    
+ *********************************************************************
+ s.replace(<old>, <new>[, <count>])
+
+    Replaces occurrences of a substring within a string.
+
+s.replace(<old>, <new>) returns a copy of s with all occurrences of substring <old> replaced by <new>:
+
+>>> 'foo bar foo baz foo qux'.replace('foo', 'grault')
+'grault bar grault baz grault qux'
+***********************************************************************
