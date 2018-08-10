@@ -100,7 +100,136 @@ f()
 
 # output : 5
 
---exit--
+--next--
 
 
  
+Keyword Arguments
+Functions can also be called using keyword arguments of the form kwarg=value. 
+For instance, the following function:
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+
+accepts one required argument (voltage) and three optional arguments (state, action, and type). 
+This function can be called in any of the following ways:
+
+parrot(1000)                                          # 1 positional argument
+parrot(voltage=1000)                                  # 1 keyword argument
+parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
+parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
+parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
+parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
+
+invalid call:
+
+parrot()                     # required argument missing
+parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
+parrot(110, voltage=220)     # duplicate value for the same argument
+parrot(actor='John Cleese')  # unknown keyword argument
+
+
+--next--
+
+
+function can accept tuples and keywords as arguments
+use *parameter for tuples and **parameter for keywords
+
+def play(sport,*teams,**venues):
+    print('sport ',sport)
+    print('teams ',teams)
+    for venue in venues:
+        print(venue,venues[venue])
+
+
+play('cricket','ind','sa','nz',india='bangalore',south_africa='capetown',newZealand='auckland')
+
+
+Note : *parameter must appear must before **parameter
+Note : **parameter must be at end
+
+
+--next--
+
+Arbitrary Argument Lists
+
+Finally, the least frequently used option is to specify that a function can be called with an arbitrary number of arguments. 
+These arguments will be wrapped up in a tuple .
+Before the variable number of arguments, zero or more normal arguments may occur.
+
+>>> def concat(*args, sep="/"):
+...     return sep.join(args)
+...
+>>> concat("earth", "mars", "venus")
+'earth/mars/venus'
+
+--next--
+
+Unpacking Argument Lists
+
+>>> list(range(3, 6))            # normal call with separate arguments
+[3, 4, 5]
+>>> args = [3, 6]
+>>> list(range(*args))            # call with arguments unpacked from a list
+[3, 4, 5]
+
+
+*********************************lambda expressions************************************
+
+lambda expression Python allow us to define a function anonymously. 
+It is worthwhile to note that it is an expression, not a statement. 
+That is, it returns a value; it has an implicit return statement. 
+The following is the Python syntax of a lambda expression in Python.
+
+lambda [arg1,arg2,..]:[expression]
+
+
+add = lambda a,b : a+b
+
+print(add(3,4))
+
+ex 2 :
+square = lambda a : a**2
+
+print(square(4))    #16
+
+--next--
+
+
+ Documentation Strings
+ 
+ 
+ >>> def my_function():
+...     """Do nothing, but document it.
+...
+...     No, really, it doesn't do anything.
+...     """
+...     pass
+...
+>>> print(my_function.__doc__)
+Do nothing, but document it.
+
+    No, really, it doesn't do anything.
+    
+ --next--
+ 
+ Function Annotations :
+ 
+ Function annotations are completely optional metadata information about the types used by user-defined functions 
+
+Annotations are stored in the __annotations__ attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal ->, followed by an expression, between the parameter list and the colon denoting the end of the def statement. The following example has a positional argument, a keyword argument, and the return value annotated:
+>>>
+
+>>> def f(ham: str, eggs: str = 'eggs') -> str:
+...     print("Annotations:", f.__annotations__)
+...     print("Arguments:", ham, eggs)
+...     return ham + ' and ' + eggs
+...
+>>> f('spam')
+Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}
+Arguments: spam eggs
+'spam and eggs'
+
