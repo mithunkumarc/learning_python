@@ -136,6 +136,16 @@ def printNumbers(start, end):
 
 printNumbers(10,20)
 
+---- reading documentaion string ----
+
+def hello():
+    '''i am a doc string'''
+
+
+help(hello)
+print(hello.__doc__)
+
+
 
 
 ************************************Default arguments values of funtion *****************************
