@@ -75,6 +75,35 @@ Lists might contain items of different types, but usually the items all have the
     # ['yellow', 'green', 'blue', 'red']
     
     
+    Ex : inserting element into list
+    colors = ['red','blue','green','yellow']
+    colors.insert(1,'indigo')   #insert(index,element)
+    print(colors)
+    # ['red', 'indigo', 'blue', 'green', 'yellow']
+    
+    
+    Ex : pop() to remove element
+    colors = ['red','blue','green','yellow']
+    colors.pop(0)
+    print(colors)
+    # ['blue', 'green', 'yellow']
+    
+    Ex : clear()
+    colors = ['red','blue','green','yellow']
+    colors.clear()
+    print(colors)
+    # []
+    
+    
+    Ex : count() , return number of appearance of an element
+    colors = ['red','blue','green','yellow','red']
+    print(colors.count('red'))
+    # 2
+    
+    
+    
+    
+    
     
     *Note : simple swap example
     a = 10
