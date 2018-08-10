@@ -1,0 +1,106 @@
+keyword arguments
+Functions can also be called using keyword arguments of the form kwarg=value.
+
+def score(team1, team2='cuba',day='sunday'):
+    print('team1 ', team1)
+    print('team2 ', team2)
+    print('day ',day)
+    print('--exit--')
+
+# valid call
+ score('india')
+ score('india',team2='russia')
+ score('india',day='friday')
+
+# invalid call
+score(team2='vietnam',day='monday') #required positional argument mission, team1 value missing
+
+
+# example 2
+def score(matchNumber,team1='india', team2='cuba',day='sunday'):
+    print('team1 ', team1)
+    print('team2 ', team2)
+    print('day ',day)
+    print('match number ',matchNumber)
+    print('--exit--')
+
+--exit--
+
+functions can take tuples as argument , parameter must be declared as *argumentslist
+functions can take keywords as argument , parameter must be declared as **keywords
+**keywords must be declared as the last.
+*arguments must be appear before **keywords
+
+def play(sport,*teams,**venues):
+    print('sport ',sport)
+    print('teams ',teams)
+    for venue in venues:
+        print(venue,venues[venue])
+    
+
+play('cricket','ind','sa','nz',india='bangalore',south_africa='capetown',newZealand='auckland')
+
+
+
+example 2 : 
+def play_foot_ball(sport,**venues,*teams):
+    pass
+ 
+# error : * parameter after ** parameter
+
+
+
+--exit--
+
+ score(matchNumber=112,113)  #error
+# Positional argument after keyword argument : reason trying to assign required parameter with two values
+
+
+score(113,matchNumber=112)   #error
+#  got multiple values for argument 'matchNumber' : runtime
+
+--next--
+
+
+def sayHello(name,message=', welcome to programming!!'):
+    print(name + message)
+
+
+sayHello(name='rajat','message positional')
+#error : positional argument after keyword argument
+
+solution : 
+sayHello('rajat',message='new message')
+sayHello('rajat',message='another message')
+sayHello('rajat')
+
+--next--
+
+def sayHello(message=', welcome to programming!!',name):
+    print(name + message)
+
+# error : non-default parameter follows default parameter
+
+solution : 
+def sayHello(name,message=', welcome to programming!!'):
+    print(name + message)
+
+
+--next--
+
+The default values are evaluated at the point of function definition in the defining scope.
+
+i = 5
+
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+
+# output : 5
+
+--exit--
+
+
+ 
