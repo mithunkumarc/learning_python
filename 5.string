@@ -1,0 +1,120 @@
+concatenete :
+The + Operator
+
+The + operator concatenates strings. It returns a string consisting of the operands joined together, as shown here:
+
+>>> s = 'foo'
+>>> t = 'bar'
+>>> u = 'baz'
+
+>>> s + t
+'foobar'
+>>> s + t + u
+'foobarbaz'
+
+>>> print('Go team' + '!!!')
+Go team!!!
+**********************************************************
+
+The * Operator
+
+The * operator creates multiple copies of a string. 
+If s is a string and n is an integer, 
+either of the following expressions returns a string consisting of n concatenated copies of s:
+
+    s * n
+    n * s
+
+Here are examples of both forms:
+
+>>> s = 'foo.'
+
+>>> s * 4
+'foo.foo.foo.foo.'
+>>> 4 * s
+'foo.foo.foo.foo.'
+
+****************************************************************
+
+The in Operator
+
+Python also provides a membership operator that can be used with strings. The in operator returns True if the first operand is contained within the second, and False otherwise:
+
+>>> s = 'foo'
+
+>>> s in 'That\'s food for thought.'
+True
+>>> s in 'That\'s good for now.'
+False
+
+There is also a not in operator, which does the opposite:
+
+>>> 'z' not in 'abc'
+True
+>>> 'z' not in 'xyz'
+False
+
+***********************************************************
+len(s)
+
+    Returns the length of a string.
+
+len(s) returns the number of characters in s:
+
+>>> s = 'I am a string.'
+>>> len(s)
+14
+
+*******************************************************
+
+str(obj)
+
+    Returns a string representation of an object.
+
+Virtually any object in Python can be rendered as a string. str(obj) returns the string representation of object obj:
+
+>>> str(49.2)
+'49.2'
+>>> str(3+4j)
+'(3+4j)'
+>>> str(3 + 29)
+'32'
+>>> str('foo')
+'foo'
+
+*************************************************
+
+
+String Indexing
+
+left to right index : 0 to len(string)-1
+right to left index : -1 to -len(string)
+
+
+>>> s = 'foobar'
+
+>>> s[0]
+'f'
+>>> s[1]
+'o'
+>>> s[3]
+'b'
+>>> len(s)
+6
+>>> s[len(s)-1]
+'r'
+
+Here are some examples of negative indexing:
+
+>>> s = 'foobar'
+
+>>> s[-1]
+'r'
+>>> s[-2]
+'a'
+>>> len(s)
+6
+>>> s[-len(s)]
+'f'
+
+
