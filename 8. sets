@@ -1,0 +1,43 @@
+A set is an unordered collection with no duplicate elements. 
+Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+
+Curly braces or the set() function can be used to create sets. 
+Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary, 
+Note : {} : keyword, not a set
+Note : set() : empty set
+
+Ex : try adding duplicates 
+    >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+    >>> print(basket)                      # show that duplicates have been removed
+    #output : {'orange', 'banana', 'pear', 'apple'}
+    
+    
+Ex : searching element
+    >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+    >>> 'orange' in basket                 # fast membership testing
+    True
+    >>> 'crabgrass' in basket
+    False
+    
+    
+Ex : 
+a = set('cricket')
+b = set('wicket')
+print(a)	#set(['c', 'e', 'i', 'k', 'r', 't']) , one c rejected
+
+# subtraction
+print(a-b)	 
+# output : set(['r']) 
+#letters in a but not in b
+
+print(a|b)
+# letters in a but not in b
+# set(['c', 'e', 'i', 'k', 'r', 't', 'w'])
+
+print(a & b)
+# letters common in both a and b
+# set(['i', 'c', 'e', 'k', 't'])
+
+print(a ^ b)
+# letters in either a or in b not both
+#set(['r', 'w'])
