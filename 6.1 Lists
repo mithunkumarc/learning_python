@@ -25,3 +25,53 @@ print(list)
 
 *Note : List is not suitable to implement queue. when you remove first element, removing elements has to
 move one step above as list store elements using index
+
+# To implement queue, use collections.deque
+# which was designed to have fast appends and pops
+# from both ends
+      from collections import deque
+      queue = deque(["john","madhu","shami"])
+      queue.append("Terry")
+      print(queue)
+      queue.popleft()
+      print(queue) 
+# output :
+deque(['john', 'madhu', 'shami', 'Terry'])
+deque(['madhu', 'shami', 'Terry']) # john removed
+
+*************************************************************
+
+Ex : operatin on list elements
+# operation on list elements
+# squaring elements
+
+Example 1 :
+squares = []
+for x in range(10):
+    squares.append(x**2)
+print("without lamda ",squares)
+
+Example 2:
+
+sq = lambda x : x ** 2
+result = map(sq,range(10))
+print("with lambda ",result)
+
+******************************************************************
+del statement : 
+There is a way to remove an item from a list given its index instead of its value: the del statement. 
+This differs from the pop() method which returns a value. 
+The del statement can also be used to remove slices from a list or clear the entire list
+
+number = [10,20,30,40,50,60,70,80]
+del number[0]
+print(number)
+del number[2:4]
+print(number)
+
+output :
+[20, 30, 40, 50, 60, 70, 80]
+[20, 30, 60, 70, 80]
+
+*************************************************************************
+
