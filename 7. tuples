@@ -1,0 +1,51 @@
+tuples : order collection of objects.
+Tuples are defined by enclosing the elements in parentheses () instead of square brackets [].
+tuples, list and range belongs to sequences type.
+lists are mutable where as tuples are immutable , but tuples contains mutable objects.
+
+Ex : 
+  t = 12345, 54321, 'hello'
+  print(t[0])
+  print(t)
+
+Ex : tuples are immutable , you cannot replace element, append or delete an element.
+  t = 12345, 54321, 'hello'
+  t[0] = 4545
+  # TypeError: 'tuple' object does not support item assignment
+  
+  
+Ex : tuples may be nested
+  t = (1,2,3), (4,5,6)
+  print(t
+  # ((1, 2, 3), (4, 5, 6))
+  
+  
+Ex : tuples can contain mutable objects , example using lists, lists are mutable
+  list1 = [1,2,3]
+  list2 = [4,5,6]
+  t = (list1,list2)
+  print(t)            # ([1, 2, 3], [4, 5, 6])
+  t[0].append(99)
+  print(t)            # ([1, 2, 3, 99], [4, 5, 6])
+  
+  
+  
+Ex : creating tuple with single element
+  # to create a tuple with single element
+  p = "this is not a tuple"
+  t = "i am tuple",	#note trailing comma
+  print(type(t))      # <type 'tuple'>
+  
+  
+ Ex : empty tuple
+    empty = ()    
+    print(type(emtpy))  # <type 'tuple'>
+    
+    
+ Ex : unpacking tuple
+ 
+  t = (5, 10, 15)	    # packing tuple
+  (x ,y , z) = t      # unpacking tuple
+  print('x',x)
+  print('y',y)
+  print('z',z)
