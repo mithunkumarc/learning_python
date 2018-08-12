@@ -118,6 +118,16 @@ print(sports)
 
 
 Ex : other way of looping dictionaries
+sports = dict(cricket=11,chess=2,kabaddi=7)
+for k,v in sports.items():
+	print(k, v)
+# output :
+('cricket', 11)
+('kabaddi', 7)
+('chess', 2)
+
+
+
 
 
 
