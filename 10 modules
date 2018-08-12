@@ -58,6 +58,13 @@ from example import fib
 
 print(fib(8))
 
+*********************************************************
+
+running module as script from terminal/command line, go to directory where your module has been created
+
+/Documents/subpy$ python test.py
+
+
 
 *Note : to import everything from a module use : 
 from <module_name> import *
