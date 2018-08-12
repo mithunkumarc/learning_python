@@ -12,3 +12,114 @@ with the requirement that the keys are unique (within one dictionary).
 A pair of braces creates an empty dictionary: {}. 
 Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; 
 this is also the way dictionaries are written on output.
+
+Syntax : variable = { key1 : value1, key2 : value2, ...}
+
+
+Ex : diplaying all elements 
+tel = { 'jack':4098 , 'sape': 4139}
+# display all elements
+print(tel)
+
+--next--
+
+Ex : adding new element
+tel = { 'jack':4098 , 'sape': 4139}
+tel['vinay'] = 4354
+print(tel
+# output : {'vinay': 4354, 'sape': 4139, 'jack': 4098}
+
+--next--
+
+Ex : deleting an element
+tel = { 'city1': 'patna' , 'city2': 'agartala', 'city3' : 'jaipur'}
+print(tel)
+del tel['city1']
+print(tel)
+# output : {'city2': 'agartala', 'city3': 'jaipur', 'city1': 'patna'}
+# output : {'city2': 'agartala', 'city3': 'jaipur'}
+
+--next--
+
+Ex : get all keys in a list
+tel = { 'city1': 'patna' , 'city2': 'agartala', 'city3' : 'jaipur'}
+# list all keys
+print(list(tel))
+# ['city2', 'city3', 'city1']
+
+
+--next--
+
+Ex : reading keys and values from dictionaries
+tel = { 'city1': 'patna' , 'city2': 'agartala', 'city3' : 'jaipur'}
+for key in tel:
+	print(key,":",tel[key])
+# output :
+city2:agartala
+city3:jaipur
+city1:patna
+
+
+--next--
+
+Ex : updating an element 
+tel = { 'city1': 'patna' , 'city2': 'agartala', 'city3' : 'jaipur'}
+print(tel)
+tel['city1'] = 'mangalore'
+print(tel)
+# output : 
+# {'city2': 'agartala', 'city3': 'jaipur', 'city1': 'patna'}
+# {'city2': 'agartala', 'city3': 'jaipur', 'city1': 'mangalore'}
+
+
+
+--next--
+
+
+Ex : dictionary can have different kind of values
+tel = { 'city1': 'patna' , 'flag': True, 'price' : 34.56}
+print(tel)
+# output : {'flag': True, 'city1': 'patna', 'price': 34.56}
+
+
+--next--
+
+
+Ex : search a key from dictionary
+tel = { 'city1': 'patna' , 'flag': True, 'price' : 34.56}
+print('city1' in tel)
+# output : True
+
+tel = { 'city1': 'patna' , 'flag': True, 'price' : 34.56}
+print('city1' not in tel)
+# ouput : False
+
+
+--next--
+
+
+Ex : 
+
+The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+
+sports = dict([('cricket',11),('chess',2),('kabaddi',7)])
+print(sports)
+
+# output : {'cricket': 11, 'kabaddi': 7, 'chess': 2}
+
+
+Ex : same as above
+
+sports = dict(cricket=11,chess=2,kabaddi=7)
+print(sports)
+
+
+--next--
+
+
+Ex : other way of looping dictionaries
+
+
+
+
+
