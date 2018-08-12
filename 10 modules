@@ -1,1 +1,113 @@
+A module is a file containing Python definitions and statements. 
+The file name is the module name with the suffix .py appended. 
+Within a module, the module’s name (as a string) is available as the value of the global variable __name__.
 
+
+Modular programming refers to the process of breaking a large, unwieldy programming task into separate, 
+smaller, more manageable subtasks or modules. 
+Individual modules can then be cobbled together like building blocks to create a larger application.
+
+
+There are several advantages to modularizing code in a large application:
+
+    Simplicity: 
+
+    Maintainability: 
+
+    Reusability:
+
+    separate namespace, which helps avoid collisions between identifiers in different areas of a program. 
+    # modules lets us to have two class with same name in two different modules 
+
+
+create file name test.py, try to print global variable '__name__'
+Ex :
+print(__name__)
+# output : __main__
+Note : __main__ tells us that test.py being executed directly
+if other module uses test.py, __name__ will be assigned by value 'test' which is same as module name.
+
+
+**********************************Importing module**********************************
+
+example.py
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+    	print(a)
+        a, b = b, a+b
+      
+test.py
+
+import example
+
+print(example.fib(8))
+
+--or--
+
+import example as e
+
+print(e.fib(8))
+
+
+--or-- importing individual function
+
+
+from example import fib
+
+print(fib(8))
+
+
+*Note : to import everything from a module use : 
+from <module_name> import *
+
+**************************************************************************************
+
+The built-in function dir() returns a list of defined names in a namespace(module). 
+Without arguments, it produces an alphabetically sorted list of names in the current local symbol table:
+
+Ex : 
+example.py has one function and class Car
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+    	print(a)
+        a, b = b, a+b
+
+
+class Car:
+	def sayHi(self):
+		return 'hello'
+
+
+
+In test.py module
+
+import example
+print(dir(example))
+
+output :    ['Car', '__builtins__', '__doc__', '__file__', '__name__', '__package__', 'fib']
+
+
+
+--next--
+Ex : with out importing any module executing dir() 
+
+print(dir())
+
+# output : ['__builtins__', '__doc__', '__file__', '__name__', '__package__']
+
+--next--
+
+
+Ex :
+dir() does not list the names of built-in functions and variables.
+If you want a list of those, they are defined in the standard module builtins:
+>>>
+
+>>> import builtins
+>>> dir(builtins)
+
+*********************************************************
