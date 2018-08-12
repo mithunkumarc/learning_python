@@ -75,3 +75,57 @@ output :
 
 *************************************************************************
 
+
+enumerate()
+When looping through a sequence, 
+the position index and corresponding value can be retrieved at the same time using the enumerate() function.
+for i in enumerate(['tic','tac','toe']):
+	print(i)
+      
+# output :
+(0, 'tic')
+(1, 'tac')
+(2, 'toe')
+
+
+************************************************************************
+
+To loop over two or more sequences(lists) at the same time, the entries can be paired with the zip() function.
+Ex :
+countries = ['india','germany','japan']
+location = ['delhi','berlin','tokyo']
+for c, l in zip(countries,location):
+	print(c,l)
+# output :
+('india', 'delhi')
+('germany', 'berlin')
+('japan', 'tokyo')
+
+**************************************************************************
+
+reversing range 
+
+for i in reversed(range(1,10,2)):
+	print(i)
+ # output : 9 7 5 3 2 1
+ 
+ 
+ ************************************************************
+ 
+ sorted() : create new list of sorted elements
+ 
+ Ex :
+ 
+      list = ['zack','tred','craig']
+      anotherlist = sorted(list)
+      print(anotherlist)
+  
+ # output :
+ ['craig', 'tred', 'zack']
+ 
+ sort() vs sorted() : 
+ sorted() returns a new sorted list, leaving the original list unaffected. 
+ list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).
+
+
+*****************************************************************
