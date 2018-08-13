@@ -128,8 +128,26 @@ for k,v in sports.items():
 
 
 
+******************************************************************************
+using dictionary as switch statement:
 
+def week(i):
+    days = {
+        1 : 'sunday',
+        2 : 'monday',
+        3 : 'tuesday',
+        4 : 'wednesday',
+        5 : 'thursday',
+        6 : 'friday',
+        7 : 'saturday'
+    }
+    # days.get(i) returns None if no key found
+    # if no matching key found , wrong number will be sent
+    return days.get(i,'wrong number')
 
+print(week(12))
 
+# output : wrong number
+******************************************************************
 
 
