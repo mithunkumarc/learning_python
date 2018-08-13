@@ -4,6 +4,17 @@ n = int(input('please enter integer :'))
 if n % 2 == 0:
     print('even')
     
+    
+    
+Ex : taking string as input
+
+>>> word = str(input('enter your name"\n'))
+enter your name"
+chris
+>>> word
+'chris'
+
+    
 ************************************if else********************************************
 
 n = int(input('please enter integer :'))
