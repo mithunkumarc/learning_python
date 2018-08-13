@@ -208,3 +208,21 @@ True
 
 --next--
 
+**********************************strings are immutable in python******************************
+
+similar to string pool in java, if two variables points to same string copy then they have same id.
+
+Ex ;
+
+word = 'abc'
+print('word : ',id(word))
+anotherWord = 'abc'
+print('another world ',id(anotherWord))
+print(word is anotherWord)
+
+#output :
+word :  140209062657136
+another world  140209062657136
+True
+
+--next--
