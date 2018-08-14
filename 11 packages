@@ -1,1 +1,58 @@
 
+Packages allow for a hierarchical structuring of the module namespace using dot notation. 
+In the same way that modules help avoid collisions between global variable names, 
+packages help avoid collisions between module name.
+
+package1 
+__init__.py
+Tiger.py
+
+package2
+__init__.py
+Bird.py
+
+----------code in Tiger.py--------
+def sound():
+    return 'roar'
+
+
+def run():
+    return 'running'
+    
+    
+---------code in test.py----------
+import package1.Tiger
+print(package1.Tiger.run())
+print(package1.Tiger.sound())
+
+output : 
+running
+roar
+
+
+***************************************** __init__.py  **********************************************
+If a file named __init__.py is present in a package directory, 
+it is invoked when the package or a module in the package is imported. 
+This can be used for execution of package initialization code, such as initialization of package-level data.
+
+Ex :
+package1
+      Tiger.py
+      __init__.py
+
+----- code in __init__.py ------
+print('initializing package1...')
+
+
+------ code in test.py---------
+import package1.Tiger
+
+output : 
+initializing package1...
+
+**********************************************************************************************************
+
+
+
+
+
