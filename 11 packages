@@ -61,6 +61,35 @@ print(sound())
 
 
 ***********************************************************************************************************
+__all__ variable in __init__.py
+
+lets say package1 has Lion.py and Tiger.py
+
+in test.py
+from package1 import *
+print(dir())
+
+output : ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
+# not included Lion and Tiger module
+
+so , in package1, under __init__.py define __all__ variable
+
+--- code in __init__.py file ---
+
+__all__ = [
+    'Lion',
+    'Tiger'
+]
+
+
+-- test again in test.py --
+
+from package1 import *
+print(dir())
+
+output : added modules 
+# ['Lion', 'Tiger', '__annotations__', '__builtins__', 
+'__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
 
 
 
