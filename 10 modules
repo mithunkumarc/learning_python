@@ -117,4 +117,12 @@ If you want a list of those, they are defined in the standard module builtins:
 >>> import builtins
 >>> dir(builtins)
 
-*********************************************************
+****************************************************************************
+
+reloading a module
+if u change imported module exterenally, to see the changes either restart iterpreter or reload module
+
+import <modulename>
+import importlib
+//find out if module is changed, then reload
+importlib.reload(<modulename>)
