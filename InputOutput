@@ -1,0 +1,32 @@
+**********************************
+var = input()
+print(type(var))
+
+# input : 12
+# output : str
+
+* by default intput takes input as string
+* use int(input('enter a number')) to accept as integer
+
+
+****************************************************
+
+formatting str , %s is used to display value of a variable within string
+
+num1 = 10
+num2 = 20
+print('the sume of num1 %s and num2 %s is %s ' %(num1,num2,num1+num2))
+# the sume of num1 10 and num2 20 is 30 
+
+* although you can use %d for number, %s is recommended to avoid confusion
+%s work for both number and str
+%d only work for number
+
+********************************************
+
+
+# formatting string using curly braces
+num1 = 10
+num2 = 20
+print('the sum of num1 : {} and num2 : {} is {} '.format(num1,num2,num1+num2))
+
