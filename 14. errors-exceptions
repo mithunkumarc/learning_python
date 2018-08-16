@@ -75,10 +75,92 @@ except BaseException:
 
 raising exception : forcing caller to hadle exception
 
+without raising exception, designer has to handle error
+
+def division(numerator,denominator):
+    try:
+        numerator / denominator
+    except ZeroDivisionError:
+        print('denominator must not be zero')
 
 
 
+division(20,0)
 
+
+Example 2 ; using raise keyword to force caller to handle error
+
+def division(numerator,denominator):
+    if denominator == 0:
+        raise ZeroDivisionError
+    numerator / denominator
+
+
+try:
+    division(20,0)
+except ZeroDivisionError:
+    print("i shouldn't had sent zero as denominator")
+    
+    ***************************************************************************************
+  
+  List of other excetpions
+  
+  NameError : 
+  if your try to use variable without defining
+  
+ name
+ print(name)
+ 
+ # output : NameError: name 'name' is not defined
+ 
+ 
+ 
+ *********************************************************************************************
+ 
+ FileNotFoundError :
+ f = open("missingFile.txt",'r')
+for line in f.readlines():
+    print(line)
+    
+# output :
+FileNotFoundError: [Errno 2] No such file or directory: 'missingFile.txt'
+
+
+
+************************************************************************************************
+ValueError : mismatch data type
+
+number = int(input('enter a number\n'))
+print(number)
+
+# output :
+enter a number
+one
+ValueError: invalid literal for int() with base 10: 'one'
+
+*************************************************************************************************
+
+user defined exception and using finally statment
+
+def withDrawMoney(amount):
+    balance = 10000
+    if amount > balance:
+        raise InsufficientMoney
+    else:
+        balance = balance - amount
+        print(f'withdraw {amount} successfull')
+    return balance
+
+
+class InsufficientMoney(BaseException):
+    pass
+
+try:
+    withDrawMoney(25000)
+except InsufficientMoney:
+    print("send amount less than balance")
+finally:
+    print('thank you for using our services')
 
 
 
