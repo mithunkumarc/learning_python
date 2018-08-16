@@ -35,13 +35,39 @@ print('the sum of num1 : {0} and num2 : {1} is {2} '.format(num1,num2,num1+num2)
 
 ***********************************************
 
-formatted string literals
+formatted string literals 
 
 Formatted string literals (also called f-strings for short) let you include the value of Python expressions 
 inside a string by prefixing the string with f or F and writing expressions as {expression}.
 
+syntax : print(' the value is {positionOfExpression1,poe2...:nd}'.format(expression1/variable1,e2/v2...))
+          or
+         print(f' the value is {expression:nd}')      #number of spaces , nf number of decimal places, no postion needed
+
 An optional format specifier can follow the expression. 
-This allows greater control over how the value is formatted. The following example rounds pi to three places after the decimal:
+This allows greater control over how the value is formatted. 
+The following example rounds pi to three places after the decimal:
+
 >>>
+import math
+# without formatting
+print('the value of pi {0}'.format(math.pi))
+
+# with formattting
+print('the value of pi {0:.3f}'.format(math.pi))      # 0 because there's only one value goint to output
+print('the value of pi {:.3f}'.format(math.pi))       #notice , zero as been removed
+
+print(f'the value of pi is approximately {math.pi:.3f}')
+
+#output : 
+the value of pi 3.141592653589793
+the value of pi 3.142
+the value of pi is approximately 3.142
+
+----Ex---
+
+
+
+
 
 
