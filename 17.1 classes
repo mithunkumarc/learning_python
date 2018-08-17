@@ -1,0 +1,36 @@
+private members of class :
+class AtmCard:
+    def __init__(self,password):
+        self.__password = password      # __password is a private property
+
+atmCard = AtmCard(1234)
+print(atmCard.__password)   # error, can't access private property
+
+
+private function :
+
+class AtmCard:
+    def __init__(self,password,cardNumber):
+        self.__password = password
+        self.cardNumber = cardNumber
+
+
+    def __validate(self):
+        return len(self.cardNumber) > 0
+
+
+    def testValidate(self):
+        return self.__validate()
+
+
+
+atmCard = AtmCard(1234,'SBI123')
+#print(atmCard.__validate()) #error
+print("is atmcard is valid ? ",atmCard.testValidate())
+
+
+# output :
+is atmcard is valid ?  True
+
+
+**************************************************************************
