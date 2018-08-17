@@ -47,7 +47,7 @@ def outer():
 
     inner()
     print("outer:", x)
-
+    # print(spam) # error , not accessible
 
 outer()
 
@@ -55,6 +55,26 @@ outer()
 # output :
 inner : nonlocal
 outer : nonlocal
+
+
+*********************************************************************************
+global : 
+In Python, a variable declared outside of the function or in global scope is known as global variable. 
+This means, global variable can be accessed inside or outside of the function.
+
+
+def scope_test():
+    def do_global():
+        global spam
+        spam = 'global spam'
+    spam = 'test spam'
+    do_global()
+
+scope_test()
+print(spam)     # no error, spam has global scope
+
+# output : global spam
+
 
 
 
