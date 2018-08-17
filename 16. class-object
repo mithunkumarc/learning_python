@@ -1,0 +1,95 @@
+Classes provide a means of bundling data and functionality together. 
+Creating a new class creates a new type of object, allowing new instances of that type to be made. 
+Each class instance can have attributes attached to it for maintaining its state. 
+Class instances can also have methods (defined by its class) for modifying its state.
+
+class Car:
+    '''simple class'''
+    brandName = 'Toyota'
+    modelNumber = 234
+
+    def start(self):
+        return 'start car'
+
+    def stop(self):
+        return 'stop car'
+
+    def carInfo(self):
+        return self.brandName ,':',self.modelNumber
+
+
+car = Car()
+print(car.carInfo())
+
+
+# output :
+('Toyota', ':', 234)
+
+# Note : self refer to current object
+
+***********************************************************************************
+
+___init()__ function:
+The instantiation operation (“calling” a class object) creates an empty object. 
+Many classes like to create objects with instances customized to a specific initial state. 
+Therefore a class may define a special method named __init__(), like this.
+__init()__ executed when an object being created
+
+
+Ex : 
+
+class Car:
+    '''simple class'''
+    
+    def __init__(self):
+        print('car object created')
+
+car = Car()
+
+# output : car object created
+
+************************************************************************************
+using __init__ function to initialize ojbect properties
+
+class Car:
+    '''simple class'''
+    def __init__(self,brandName,modelNumber):
+        self.brandName = brandName
+        self.modelNumber = modelNumber
+
+    def carInfo(self):
+        return self.brandName,";",self.modelNumber
+
+car = Car('Toyota',456)
+print(car.carInfo())
+
+# output : ('Toyota', ';', 456)
+
+
+************************************************************************************
+
+
+class with collection property type
+
+class Stationary:
+
+    def __init__(self):
+        self.items = []
+
+    def add(self,item):
+        self.items.append(item)
+
+s = Stationary()
+s.add('pen')
+s.add('file')
+print(s.items)
+
+
+********************************************************************************
+
+
+
+
+
+
+
