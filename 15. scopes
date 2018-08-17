@@ -1,0 +1,61 @@
+local scope : not accessible outside enclosing scope
+A variable declared inside the function's body or in the local scope is known as local variable.
+
+def scope_test():
+    def do_local():
+        spam = 'local spam'
+
+    spam = 'test spam'
+    do_local()
+    print(spam)
+
+scope_test()
+# print(spam)     # error
+
+# ouput : 'test spam'
+
+
+non local
+Nonlocal variable are used in nested function whose local scope is not defined.
+This means, the variable can be neither in the local nor the global scope.
+
+Ex :
+def scope_test():
+    def do_nonlocal():
+        nonlocal spam
+        spam = 'nonlocal spam'
+
+    spam = 'test spam'
+    do_nonlocal()
+    print(spam)
+
+
+scope_test()
+# print(spam) # error , not accessible
+
+# output : 'nonlocal spam
+
+
+Ex 2 :
+def outer():
+    x = "local"
+
+    def inner():
+        nonlocal x
+        x = "nonlocal"
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+
+outer()
+
+
+# output :
+inner : nonlocal
+outer : nonlocal
+
+
+
+
