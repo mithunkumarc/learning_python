@@ -1,0 +1,37 @@
+ It is not necessary that the function definition is textually enclosed in the class definition: 
+ assigning a function object to a local variable in the class is also ok.
+ For example:
+ 
+ def eat(self):
+    print(self.name)
+
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+    e = eat
+
+
+a = Animal('tiger')
+a.e()
+
+
+
+****************************************************************************
+avoid creating multiple reference to same function
+
+class Animal:
+    def eat(self):
+        print('eating')
+
+    e = eat
+
+
+a = Animal()
+a.e()
+a.eat()
+
+#ouput : e being exactly equivalent to eat. Note that this practice usually only serves to confuse the reader of a program.
+eating
+eating
