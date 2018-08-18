@@ -1,1 +1,111 @@
 inheritance
+
+Syntax :
+          class DerivedClassName(BaseClassName):
+              <statement-1>
+              .
+              .
+              .
+              <statement-N>
+
+Example :
+
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self,name,color):
+        self.color = color
+        self.name = name
+
+d = Dog('rex','white')
+print(d.name)
+
+
+Note : if the parent class in seperate module 
+syntax will be 
+
+  class DerivedClassName(modname.BaseClassName):
+
+***************************************************************************************
+
+Multiple inheritance
+
+class Electronics:
+    def __init__(self,processor):
+        self.processor = processor
+
+class MusicPlayer:
+    def __init__(self,numberOfSpeakers):
+        self.numberOfSpeakers = numberOfSpeakers
+
+class Ipod(Electronics,MusicPlayer):
+    def __init__(self,processor,numberOfSpeakers):
+        self.processor = processor
+        self.numberOfSpeakers = numberOfSpeakers
+
+ipod = Ipod('ipro',4)
+print(ipod.processor)
+print(ipod.numberOfSpeakers)
+
+# output :
+ipro
+4
+
+**********************************************************
+
+isInstance() function used to check reference variable pointing to specific object or not
+
+
+class Animal:
+    def __init__(self,name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self,name,color):
+        self.color = color
+        self.name = name
+
+
+d = Dog('rex','white')
+print(isinstance(d,Animal))
+print(isinstance(d,Dog))
+
+
+# output : because dog is a subclass of Animal, d belong to Dog type and also Animal type
+True
+True
+************************************************************
+
+IsSubclass() allows us to check where a class is subclass of specific class or not
+
+class Animal:
+    pass
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+
+print(issubclass(Animal,Dog)) # false
+print(issubclass(Dog,Animal)) # true
+
+#ouptut : 
+false , because animal is not subclass of dog
+true, because dog is a subclass of animal
+
+****************************************************************
+
+create an empty class adding properties later 
+
+
+class Employee:
+    pass
+
+john = Employee()
+john.name = 'john doe'
+john.department = 'computer lab'
+john.salary = 20000
+
