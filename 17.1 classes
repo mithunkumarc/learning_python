@@ -1,3 +1,15 @@
+Type of variables in class :
+1. private variables
+2. class variables and
+3. instance variables
+
+private varialbes : with in class
+class variables : shared by all objects
+instance variables :each individual object has unique names
+
+
+
+
 private members of class :
 class AtmCard:
     def __init__(self,password):
@@ -34,3 +46,59 @@ is atmcard is valid ?  True
 
 
 **************************************************************************
+
+class variables : shared by all objects
+
+class Student:
+    schoolName = 'vidya mandira'
+    def __init__(self):
+        pass
+
+s1 = Student()
+s2 = Student()
+print(s1.schoolName)
+print(s2.schoolName)
+
+
+# output : same shared by all student objects
+vidya mandira
+vidya mandira
+
+
+**************************************************************************
+
+instance variales :
+used to initilize object with unique values.
+
+class Student:
+    def __init__(self,name,rollNumber,address):
+        self.name = name
+        self.rollNumber = rollNumber
+        self.address = address
+
+    def studentInfo(self):
+        print(f'student name is {self.name} , with rollnumber {self.rollNumber} resides at {self.address}')
+
+s1 = Student('vinod R',23,'vasanth nagar')
+s2 = Student('avinash',8,'frazer town')
+s3 = Student('tarun',14,'church street')
+s1.studentInfo()
+s2.studentInfo()
+s3.studentInfo()
+
+
+
+# output :
+student name is vinod R , with rollnumber 23 resides at vasanth nagar
+student name is avinash , with rollnumber 8 resides at frazer town
+student name is tarun , with rollnumber 14 resides at church street
+
+
+********************************************************************************
+
+
+
+
+
+
+
