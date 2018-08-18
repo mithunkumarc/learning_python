@@ -1,0 +1,52 @@
+Iterators are objects that can be iterated upon.
+An object which will return data, one element at a time.
+
+Technically speaking, Python iterator object must implement two special methods, __iter__() and __next__(), 
+collectively called the iterator protocol.
+
+An object is called iterable if we can get an iterator from it. 
+Most of built-in containers in Python like: list, tuple, string etc. are iterables.
+
+The iter() function (which in turn calls the __iter__() method) returns an iterator from them.
+
+Ex :
+
+words = {'coffee':'hot beverage','red bul':'energy drink'}
+it = iter(words)
+
+print(it.__next__())
+print(it.__next__())
+
+# or
+
+print(next(it))
+print(next(it))
+
+
+# StopIteration exception will be thrown when you run out of elements
+
+words = {'coffee':'hot beverage','red bul':'energy drink'}
+it = iter(words)
+print(next(it))
+print(next(it))
+print(next(it))         # StopIteration error
+
+
+************************************************************************************
+To avoid StopIteration error
+
+words = {'coffee':'hot beverage','red bul':'energy drink'}
+it = iter(words)
+
+def pickWords():
+    try:
+        return words[next(it)]
+    except StopIteration:
+        return 'no more elements'
+
+
+print(pickWords())    # hot beverage
+print(pickWords())    # red bul
+print(pickWords())    # output : no more elements
+
+*****************************************************************************************
