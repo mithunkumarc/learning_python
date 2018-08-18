@@ -65,6 +65,16 @@ vidya mandira
 vidya mandira
 
 
+# no need to create class to access class variables
+
+class Animal:
+    name = 'parent'
+
+
+print(Animal.name)
+
+# output : parent
+
 **************************************************************************
 
 instance variales :
