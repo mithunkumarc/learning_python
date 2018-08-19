@@ -28,7 +28,26 @@ def score(matchNumber,team1='india', team2='cuba',day='sunday'):
 invalid : score(matchNumber=20,30)  #error : two values
           score(30,matchNumber=20)  #error
 
---exit--
+
+
+
+
+ score(matchNumber=112,113)  #error
+# Positional argument after keyword argument : reason trying to assign required parameter with two values
+
+
+score(113,matchNumber=112)   #error
+#  got multiple values for argument 'matchNumber' : runtime
+
+
+
+
+
+
+*********************************************************************************************************
+* for tuples
+** for dictionary
+
 
 functions can take tuples as argument , parameter must be declared as *argumentslist
 functions can take keywords as argument , parameter must be declared as **keywords
@@ -45,6 +64,16 @@ def play(sport,*teams,**venues):
 play('cricket','ind','sa','nz',india='bangalore',south_africa='capetown',newZealand='auckland')
 
 
+#ouput :
+sport  cricket
+teams  ('ind', 'sa', 'nz')
+india bangalore
+south_africa capetown
+newZealand auckland
+
+
+*********************************************************************************
+tuple must appear before dictionary
 
 example 2 : error
 def play_foot_ball(sport,**venues,*teams):
@@ -53,18 +82,8 @@ def play_foot_ball(sport,**venues,*teams):
 # error : * parameter after ** parameter
 
 
-
---exit--
-
- score(matchNumber=112,113)  #error
-# Positional argument after keyword argument : reason trying to assign required parameter with two values
-
-
-score(113,matchNumber=112)   #error
-#  got multiple values for argument 'matchNumber' : runtime
-
---next--
-
+******************************************************************************************
+positional argument after keyword argument
 
 def sayHello(name,message=', welcome to programming!!'):
     print(name + message)
@@ -78,7 +97,8 @@ sayHello('rajat',message='new message')
 sayHello('rajat',message='another message')
 sayHello('rajat')
 
---next--
+************************************************************************************************
+non-default parameter follows default parameter
 
 def sayHello(message=', welcome to programming!!',name):
     print(name + message)
@@ -89,8 +109,76 @@ solution :
 def sayHello(name,message=', welcome to programming!!'):
     print(name + message)
 
+**********************************************************************************************
 
---next--
+sending list/set/tuple as argument
+
+def printSequence(sequence):
+    print(sequence)
+
+
+printSequence([1,2,3,4])
+printSequence((1,2,3,4))
+printSequence({1,2,3,4})
+
+#output :
+[1, 2, 3, 4]
+(1, 2, 3, 4)
+{1, 2, 3, 4}
+
+**********************************************************************************************
+
+to accept argument as tuple
+
+def acceptAsTuple(*tuple):
+    print(tuple)
+
+
+
+acceptAsTuple(1,2,3,4)
+acceptAsTuple([1,2,3])
+acceptAsTuple({1,2,3},[2,3,4])
+acceptAsTuple({'batman':'brucewayne','age':32})
+acceptAsTuple(('a','b'))
+
+
+#ouput :
+(1, 2, 3, 4)                            # accepted as tuple
+([1, 2, 3],)                            # tuple with one list 
+({1, 2, 3}, [2, 3, 4])                  # tuple with one set and list
+({'batman': 'brucewayne', 'age': 32},)  # tuple with one dictionary
+(('a', 'b'),)                           # nested tuple
+
+
+***********************************************************************************************
+use **parameter to accept keyword arguments
+
+def printKeywords(**keywords):
+    print(keywords)
+
+
+printKeywords(name='rajat',phoneNumber=4566777)
+
+
+#output :
+{'name': 'rajat', 'phoneNumber': 4566777} 
+
+
+* Note : if you skip ** for parameter, throws TypeError
+def printKeywords(keywords):
+    print(keywords)
+
+
+printKeywords(name='rajat',phoneNumber=4566777)
+
+solution :
+instead of keyword , send as dictionary
+
+printKeywords({'name':'rajat','phoneNumber':4566777})
+
+
+
+************************************************************************************************
 
 The default values are evaluated at the point of function definition in the defining scope.
 
@@ -104,39 +192,7 @@ f()
 
 # output : 5
 
---next--
-
-
- 
-Keyword Arguments
-Functions can also be called using keyword arguments of the form kwarg=value. 
-For instance, the following function:
-
-def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
-    print("-- This parrot wouldn't", action, end=' ')
-    print("if you put", voltage, "volts through it.")
-    print("-- Lovely plumage, the", type)
-    print("-- It's", state, "!")
-
-accepts one required argument (voltage) and three optional arguments (state, action, and type). 
-This function can be called in any of the following ways:
-
-parrot(1000)                                          # 1 positional argument
-parrot(voltage=1000)                                  # 1 keyword argument
-parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
-parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
-parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
-parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
-
-invalid call:
-
-parrot()                     # required argument missing
-parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
-parrot(110, voltage=220)     # duplicate value for the same argument
-parrot(actor='John Cleese')  # unknown keyword argument
-
-
---next--
+**********************************************************************************************
 
 
 function can accept tuples and keywords as arguments
@@ -155,8 +211,43 @@ play('cricket','ind','sa','nz',india='bangalore',south_africa='capetown',newZeal
 Note : *parameter must appear must before **parameter
 Note : **parameter must be at end
 
+************************************************************************************************
 
---next--
+multiple * parameters are not allowed
+
+
+def multipleTuple(*tuple1,*tuple2):
+    print()
+
+#output : error
+
+*************************************************************************************************
+
+parameter without default parameter must be declared before *parameter
+
+def listTuple(*tuple,list):
+    print(tuple,list)
+
+listTuple(3,4,5,[4,5])
+
+# output : error, no value for list , 3,4,5,[4,5] goto tuple
+
+
+*************************************************************************************************
+
+function acception list and tuple as parameter
+
+def printKeywords(list,*tuple1):
+    print(tuple1,list)
+
+
+printKeywords([3,4,5],2,3,4,5)
+
+#output : (2, 3, 4, 5) [3, 4, 5]
+
+*************************************************************************************************
+
+
 
 Arbitrary Argument Lists
 
@@ -170,7 +261,7 @@ Before the variable number of arguments, zero or more normal arguments may occur
 >>> concat("earth", "mars", "venus")
 'earth/mars/venus'
 
---next--
+***************************************************************************************
 
 Unpacking Argument Lists
 
