@@ -209,7 +209,10 @@ Objects of Boolean type may have one of two values, True or False:
 >>> type(False)
 <class 'bool'>
 
+********************************************************************
 
+integers, string , float and tuples are immutalbe
+all functions of above classes creants new instances.
 
 
 
