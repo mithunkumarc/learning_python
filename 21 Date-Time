@@ -1,0 +1,119 @@
+Times
+
+Time values are represented with the time class. 
+A time instance has attributes for hour, minute, second, and microsecond and can also include time zone information.
+
+import datetime
+
+t = datetime.time(1, 2, 3, 0, datetime.timezone.utc)
+print(t)
+print('hour       :', t.hour)
+print('minute     :', t.minute)
+print('second     :', t.second)
+print('microsecond:', t.microsecond)
+print('tzinfo     :', t.tzinfo)
+
+# output : 
+01:02:03+00:00
+hour       : 1
+minute     : 2
+second     : 3
+microsecond: 0
+tzinfo     : UTC
+
+***************************************************************************************************************
+current date and time
+
+import datetime
+print(datetime.datetime.now())
+
+#2018-08-20 15:27:16.367879
+
+***************************************************************************************************************
+
+exploring datetime
+
+import datetime
+now = datetime.datetime.now()
+print('year ',now.year)
+print('month ',now.month)
+print('day ',now.day)
+print('hour ',now.hour)
+print('minute ',now.minute)
+print('secnd ',now.second)
+print('microsecond ',now.microsecond)
+print('today ',now.today())
+print('timezone ',now.tzinfo)
+
+# output :
+year  2018
+month  8
+day  20
+hour  15
+minute  42
+secnd  13
+microsecond  289222
+2018-08-20 15:42:13.289290
+timezone  None
+
+
+**************************************************************************************************************
+import pytz to use different timezones
+
+get Indian/Mahe time
+
+import datetime
+import pytz
+
+t = pytz.timezone('Indian/Mahe').localize(
+        datetime.datetime.now())
+print(t)
+
+# output : 2018-08-20 15:58:57.400158+04:00
+
+
+
+* to list all timezones : print(pytz.all_timezones)
+
+************************************************************************************************************
+universal time zone to regional time zone
+
+import datetime
+import pytz
+
+utc_now = pytz.utc.localize(datetime.datetime.utcnow())
+pst_now = utc_now.astimezone(pytz.timezone("Indian/Mahe"))
+print('utc ',utc_now)
+print('indian ',pst_now)
+
+
+output : 
+utc  2018-08-20 10:37:01.885763+00:00
+indian  2018-08-20 14:37:01.885763+04:00
+
+*********************************************************************************************************
+
+min time max time and time resolution(smallest increment in time/microseconds)
+
+import datetime
+
+
+print('Earliest  :', datetime.time.min)
+print('Latest    :', datetime.time.max)
+print('Resolution:', datetime.time.resolution)
+
+# output : 
+Earliest  : 00:00:00
+Latest    : 23:59:59.999999
+Resolution: 0:00:00.000001
+
+
+*************************************************************************************************************
+
+
+
+
+
+
+***********************************************************************************************************
+timezone conversion
