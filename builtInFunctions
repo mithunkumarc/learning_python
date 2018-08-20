@@ -13,5 +13,187 @@ print('Absolute value of float is:', abs(int))        #output : 94
 complex = (3 - 4j)
 print('Absolute value or Magnitude of complex is:', abs(complex))   # output : 5.0    formulat : square root of 3^2 + (-4)^2
 
+*************************************************************************
+zip() : Returns an Iterator of Tuples 
 
---next--python-data-types/
+coordinate = ['x', 'y', 'z']
+value = [3, 4, 5, 0, 9]
+
+result = zip(coordinate, value)
+resultList = list(result)
+print(resultList)
+
+# output : [('x', 3), ('y', 4), ('z', 5)]
+
+*****************************************************************************
+any() : 
+The any() method returns True if any element of an iterable is true. If not, this method returns False.
+
+list = [True,False,True]
+print(any(list))
+
+# output : 
+True
+
+Example 2 ;
+list = [False,False,False]
+print(any(list))
+
+# output ;
+False
+
+***********************************************************************************
+
+all() : 
+The all() method returns True when all elements in the given iterable are true. If not, it returns False.
+
+
+list = [True,True,True]
+print(all(list))
+
+output : 
+True
+
+Example 2 : 
+list = [True,True,False]
+print(all(list))
+
+output ; 
+False
+
+******************************************************************************
+
+ascii() : The ascii() function will replace any non-ascii characters with escape characters:
+
+x = ascii("My name is Ståle")
+print(x)
+
+# output : 'My name is St\xe5le'
+
+*******************************************************************************
+
+bin() : 
+The bin() method converts and returns the binary equivalent string of a given integer.
+If the parameter isn't an integer, it has to implement __index__() method to return an integer.
+
+number = 5
+print('The binary equivalent of 5 is:', bin(number))
+
+#output : 
+The binary equivalent of 5 is: 0b101
+
+*******************************************************************************
+
+bool():
+The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure.
+
+print(bool(10>5))      # True 
+print(bool(0))         # False , numeric 0 is false in boolean context, non zero is True
+print(bool([2,3,4]))   # True , non empty list is true
+
+
+*******************************************************************************
+
+string = "bPython is interesting."
+
+# string with encoding 'ascii'
+
+arr = bytearray(string, 'ascii')
+print(arr)      # printing byte array, output : bytearray(b'bPython is interesting.')
+for index in arr:
+    print(index)        # prints ascii value of each characters
+
+
+*********************************************************************************
+The callable() function returns True if the specified object is callable, otherwise it returns False.
+
+
+x = 5
+def yes():
+    True
+
+y = lambda x: x**2
+
+
+print(callable(x))      #False, variable cannot be called
+print(callable(yes))    #True
+print(callable(y))      #True
+
+
+****************************************************************************************
+chr()
+The chr() function returns the character that represents the specified unicode.
+
+
+print(chr(80))
+
+output : P
+
+
+********************************************************************************************
+classmethod : changing instance method to class/static method
+
+
+class Dog:
+    def eat(self):
+        print('dog eat')
+
+
+Dog.eat = classmethod(Dog.eat)
+Dog.eat()
+
+
+# output : 'dog eat'
+
+******************************************************************************************
+
+compile()
+The compile() function returns the specified source as a code object, ready to be executed.
+
+codeInString = 'a = 5\nb=6\nsum=a+b\nprint("sum =",sum)'
+codeObejct = compile(codeInString, 'test', 'exec')
+# test : filename
+# exec : mode
+exec(codeObejct)
+
+
+# output : sum = 11
+
+**************************************************************************************
+
+complex() : returns complex number 
+print(complex(4,-9))
+
+#output :  (4-9j)
+
+*************************************************************************************
+delattr() : Deletes the specified attribute (property or method) from the specified object
+
+
+class Book:
+    def __init__(self,author,title):
+        self.author = author
+        self.title = title
+
+
+b = Book('brendon eich','javascript')
+print(b.author)     # prints : brendon eich
+delattr(b,'author')
+print(b.author)     # error : AttributeError, Book object has no atrribute 'author'
+
+
+
+*********************************************************************************************
+dict()
+
+d = dict(number=10,word='ten')
+print(d)
+
+# output : {'number': 10, 'word': 'ten'}
+
+
+*****************************************************************************************
+
+
+
+
