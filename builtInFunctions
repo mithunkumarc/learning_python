@@ -194,6 +194,60 @@ print(d)
 
 *****************************************************************************************
 
+dir() : The dir() method tries to return a list of valid attributes(state and behaviour) of the object.
+
+Example : 
+d = dict(number=10,word='ten')
+print(dir(d))
 
 
+output : 
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', 
+'__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__',
+'__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',
+'__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 
+'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+
+********************************************************************************************
+
+
+divmod()
+
+The divmod() method takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder.
+
+print(divmod(10,3))
+# output : (quotient,remainder) : (3,1)
+
+
+***********************************************************************************************
+
+enumerate()
+
+ The enumerate() method adds counter to an iterable and returns it (the enumerate object).
+
+ grocery = ['milk','butter','bread']
+for g in enumerate(grocery):
+    print(g)
+    
+    # output : 
+    (0, 'milk')
+(1, 'butter')
+(2, 'bread')
+
+
+***************************************************************************************************
+@staticmethod : decorator
+used to mark a method as static method
+
+class Utility:
+    @staticmethod
+    def dollar_to_rupee(dollar):
+        print(dollar * 80)
+
+
+Utility.dollar_to_rupee(10)
+
+# output : 800
+
+****************************************************************************************************
 
