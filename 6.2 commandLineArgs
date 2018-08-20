@@ -1,0 +1,16 @@
+test.py
+
+import sys
+print(sys.argv)
+print(type(sys.argv))
+print(len(sys.argv))
+
+
+# output :
+mithun@localhost:~/Documents/pythonprograms$ python test.py 1 2 3
+['test.py', '1', '2', '3']
+<type 'list'>
+4
+
+
+*********************************************************************************************************
