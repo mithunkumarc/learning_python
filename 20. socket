@@ -1,0 +1,41 @@
+Sockets and the socket API are used to send messages across a network. 
+They provide a form of inter-process communication (IPC). 
+
+Sockets allow communication between two different processes on the same or different machines.
+
+
+The primary socket API functions and methods in this module are:
+
+    socket()
+    bind()
+    listen()
+    accept()
+    connect()
+    connect_ex()
+    send()
+    recv()
+    close()
+
+  To send message on Transmission Control Protocol (TCP) , use constants below
+
+  socket.AF_INET :
+  socket.SOCK_STREAM :  
+  
+  Address Families :
+  AF_INET : to connect remote host
+  AF_UNIX : interact with host/same system
+  
+  communication semantics
+   SOCK_STREAM - sequenced, reliable, two-way connection-based byte streams
+   SOCK_DGRAM - datagrams which is connectionless, unreliable messages of a 
+                  fixed (typically small) maximum length
+                  
+                  
+                  
+  steps to create server : 
+  socket - bind - listen - accept - rec/send - close
+  
+  steps to create client :
+  socket - connect - send/rec - close
+  
+  
