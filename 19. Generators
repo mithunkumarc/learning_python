@@ -91,6 +91,16 @@ for number in generateEvenNumbers():
 40
 
 
+***************************************************************************
+
+generator expression
+
+print(sum(x*x for x in range(0,10)))   # ouput : 285, sum built in function
+
+
+
+
+
 
 
  
