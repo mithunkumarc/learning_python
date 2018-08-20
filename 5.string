@@ -294,3 +294,16 @@ s.replace(<old>, <new>) returns a copy of s with all occurrences of substring <o
 >>> 'foo bar foo baz foo qux'.replace('foo', 'grault')
 'grault bar grault baz grault qux'
 ***********************************************************************
+
+
+
+split sentence in words
+
+word = 'foo bar foo baz foo ban'
+for w in word.split(' '):
+    print(w)
+
+# count number of words
+print(len(word.split(' ')))
+
+**********************************************************************************
