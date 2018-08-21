@@ -82,7 +82,7 @@ Lists might contain items of different types, but usually the items all have the
     # ['red', 'indigo', 'blue', 'green', 'yellow']
     
     
-    Ex : pop() to remove element
+    Ex : pop() to remove element, by default pop() removes last element
     colors = ['red','blue','green','yellow']
     colors.pop(0)
     print(colors)
@@ -108,14 +108,21 @@ Lists might contain items of different types, but usually the items all have the
     [3, 4, 5, 6]
     >>> 
  
-    EX : creating copy of a list
+    **************************************************************************************************************
+    EX : creating copy of a list, 
+    
+    shallow copy : same copy referenced by two different variables 
+    deep copy : two differnent copy of same object, 
+    use id() function to determine
+    
+    
     >>> list
     [3, 4, 5, 6]
     >>> clone = list.copy()
     >>> clone
     [3, 4, 5, 6]
 
-    
+    ***************************************************************************************************************
     
     
     *Note : simple swap example
