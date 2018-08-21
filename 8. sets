@@ -41,3 +41,195 @@ print(a & b)
 print(a ^ b)
 # letters in either a or in b not both
 #set(['r', 'w'])
+
+
+
+*******************************************************************************************
+pop():      pop doesn't take any arguments, removes random element
+set = {563,243,166,778,31,4345,545,629}
+print(set.pop())    # set 
+print(set)
+
+# output :
+545
+{166, 778, 563, 243, 629, 4345, 31}
+
+
+*********************************************************************************************
+clear()
+
+set = {563,243,166,778,31,4345,545,629}
+set.clear()
+print('size of set ',len(set))
+
+
+# output : size of set 0
+
+********************************************************************************************
+
+remove()
+
+set = {563,243,166,778,31,4345,545,629}
+set.remove(166)
+print(set)
+# output : {545, 778, 563, 243, 629, 4345, 31} , removed element 166
+
+*********************************************************************************************
+
+add() ; to add new element to set
+
+
+set = {563,243,166,778,31,4345,545,629}
+set.add(765)
+print(set)
+
+
+# output : {545, 166, 778, 563, 243, 629, 4345, 765, 31} 
+
+
+********************************************************************************************
+
+copy() : creates copy of a set
+
+set = {563,243,166,778,31,4345,545,629}
+newSet = set.copy()
+print(newSet)
+
+# {545, 166, 778, 563, 243, 629, 4345, 31}
+
+
+*********************************************************************************
+
+difference() : returns the difference of two/more sets
+
+set = {563,243,166,778,31,4345,545,629}
+newSet = set.difference({243,166,778})
+print(newSet)
+# output : {545, 563, 629, 4345, 31} 
+
+
+*******************************************************************************
+
+discard() ;removes an element
+
+set = {563,243,166,778,31,4345,545,629}
+set.discard(31)
+print(set)
+# output : {545, 166, 778, 563, 243, 629, 4345}
+
+
+
+
+* discard vs remove 
+
+    remove()
+    if you try to remove an element from a set which  doesn't exist, you will get error
+
+    discard()
+    if you try to remove an element from a set which  doesn't exist, no error, empty result
+    
+*******************************************************************************
+
+
+union() returns union of sets as new set
+
+set = {563,243,166,778,31,4345,545,629}
+newSet = set.union({563,399,299})
+print(newSet)
+# output : {545, 166, 778, 299, 399, 563, 243, 629, 4345, 31}
+
+
+
+***********************************************************************************
+
+
+difference_update() : Remove all elements of another set from this set
+
+
+set = {563,243,166,778,31,4345,545,629}
+set.difference_update({563,243,166})
+print(set)
+# output : {545, 778, 629, 4345, 31}
+
+*************************************************************************************
+
+intersection() : Return the intersection of two sets as a new set.
+
+
+set = {563,243,166,778,31,4345,545,629}
+newSet = set.intersection({222,333,166,545,999})
+print(newSet)
+# output : {545, 166}
+
+
+**************************************************************************************
+
+
+intersection_update() : Update a set(A) with the intersection of itself(A) and another(B).
+A = {1, 2, 3, 4}
+B = {2, 3, 4, 5}
+
+result = A.intersection_update(B)
+
+print('result =', result)
+print('A =', A)
+print('B =', B)
+# A contains the result of intersection of itself and B
+
+# output : 
+result = None
+A = {2, 3, 4}       # A = A intersection B
+B = {2, 3, 4, 5}
+
+
+******************************************************************************
+
+
+The isdisjoint() method returns True if two sets are disjoint sets. If not, it returns False.
+
+A = {1, 2, 3, 4}
+B = {2, 3, 4, 5}
+C = {9,8,7}
+
+print(A.isdisjoint(C))  # True : No common elements between A and C
+print(A.isdisjoint(B))  # False : some elements are common between A and B
+
+
+*************************************************************************************
+
+
+subset()
+
+A = {1, 2, 3, 4}
+B = {2,3}
+
+print(B.issubset(A))
+
+# True : B is subset of A
+
+**************************************************************************
+
+symmetric_difference() : grouping uncommon elements from both set
+
+A = {1, 2, 3, 4}
+B = {2,3,9}
+
+print(A.symmetric_difference(B))
+
+# output : {1,4,9}
+
+*******************************************************************************************
+
+symmetric_difference_update() : Update a set with the symmetric difference of itself and another.
+
+
+A = {1, 2, 3, 4,5}
+B = {2,3,9}
+
+A.symmetric_difference_update(B)        # A = A - B
+print(A)
+
+# outut : {1, 4, 5, 9}
+
+
+
