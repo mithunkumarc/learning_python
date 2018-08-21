@@ -155,7 +155,39 @@ print('resolution ',datetime.date.resolution)
 **************************************************************************************************
 
 
+date time formatting
 
+# formatting date anad time
+import datetime
+now = datetime.datetime.now()
+print('only year ',now.strftime("%Y"))
+print('only year with last two numbers ',now.strftime('%y'))
+print('only day ',now.strftime('%d'))
+print('only month ',now.strftime('%m'))
+print('day:month:year ',now.strftime('%d'),':',now.strftime('%m'),':',now.strftime('%Y'))
+print('current month ',now.strftime('%h'))  # or %b
+print('current month full name ',now.strftime('%B'))
+print('current hour : 24H format ',now.strftime('%H'))
+print('current hour : 12H format ',now.strftime('%I'))
+print('current minute ',now.strftime('%M'))
+print('current seconds running ',now.strftime('%S'))
+print('week number of year ',now.strftime('%U'))
+print('locale/system date ',now.strftime('%c'))
+
+# output :
+only year  2018
+only year with last two numbers  18
+only day  21
+only month  08
+day:month:year  21 : 08 : 2018
+current month  Aug
+current month full name  August
+current hour : 24H format  12
+current hour : 12H format  12
+current minute  19
+current seconds running  35
+week number of year  33
+locale date  Tue Aug 21 12:19:35 2018
 
 
 
