@@ -49,3 +49,15 @@ Ex : creating tuple with single element
   print('x',x)
   print('y',y)
   print('z',z)
+  
+  
+  ****************************************************************************
+  
+  as of 3.6 python , tuple has two functions count() and index()
+  
+  t = (2,3,2,4,5)
+  print(t.count(2))       # number of appearence of element 2 is 2
+  print(t.index(2))       # index of (first appearing)element 2 is 0
+
+
+******************************************************************************
