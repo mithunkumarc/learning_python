@@ -57,6 +57,25 @@ sq = lambda x : x ** 2
 result = map(sq,range(10))
 print("with lambda ",result)
 
+
+****************************************************************
+lambda using seperate function because of complexity :
+
+list = [1,2,3,4,5]
+
+def function(x):
+    x = x**2
+    x = x - 10
+    return x
+
+square = lambda x:function(x)
+
+result = map(square,list)
+
+for m in result:
+    print(m)
+
+#output : each number squred and subtracted by 10
 ******************************************************************
 del statement : 
 There is a way to remove an item from a list given its index instead of its value: the del statement. 
