@@ -307,3 +307,18 @@ for w in word.split(' '):
 print(len(word.split(' ')))
 
 **********************************************************************************
+
+strip() :  trim the spaces around a string
+
+wordWithSpace = ' hello apple  '
+print('length of string before removing spaces ',len(wordWithSpace))
+wordWithOutSpace = wordWithSpace.strip()
+print('length of string after removing spaces ',len(wordWithOutSpace))
+
+# output
+# length of string before removing spaces  14
+# length of string after removing spaces  11
+
+
+
+**********************************************************************************
