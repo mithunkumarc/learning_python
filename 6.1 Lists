@@ -154,3 +154,16 @@ for i in reversed(range(1,10,2)):
  pop() function accept index of the element as parameter to remove
 
 *****************************************************************
+
+index(element) : searches element and return its index (if duplicates, choosed index of first element)
+if element does not exists then it throw value error, saying that element not in list
+
+list = [2,4,3,4,5]
+print(list.index(4)
+
+# ouptput : 1  # index of element 4 is 1
+
+
+
+
+*****************************************************************
