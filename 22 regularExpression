@@ -1,3 +1,231 @@
+.  (Dot.) In the default mode, this matches any character except a newline.
+
+
+
+    import re
+samples = [
+    '***345lll',
+    'AIIL5=-',
+    '///\n',
+    '\n'
+]
+
+for sample in samples:
+    r1 = re.findall(r'.',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# ['*', '*', '*', '3', '4', '5', 'l', 'l', 'l']
+# ['A', 'I', 'I', 'L', '5', '=', '-']
+# ['/', '/', '/']  : skipping new line
+# []                : skipping new line character
+
+***********************************************************************************************
+
+
+*   Causes the resulting RE to match 0 or more repetitions of the preceding RE
+
+looking for pattern where it contains one letter 'a' and zero or more letter 'b'
+
+
+import re
+samples = [
+    'a',
+    'ab',
+    'axyz',
+    'abbbbbb',
+    'wxyzab'
+]
+for sample in samples:
+    r1 = re.findall(r'ab*',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# ['a']
+# ['ab']
+# ['a']
+# ['abbbbbb']
+# ['ab']
+
+
+**********************************************************************************************
+
++   :   Causes the resulting RE to match 1 or more repetitions of the preceding RE
+    # looking for pattern where it conatins single letter 'a' and atleast one or more letter 'b'
+    
+    import re
+samples = [
+    'a',
+    'ab',
+    'axyz',
+    'abbbbbb',
+    'wxyzab'
+]
+for sample in samples:
+    r1 = re.findall(r'ab+',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# []
+# ['ab']
+# []
+# ['abbbbbb']
+# ['ab']
+
+**********************************************************************************************
+    
+
+? :  Causes the resulting RE to match 0 or 1 repetitions of the preceding RE
+    # looking for pattern where it conatins single letter 'a' and zero or one letter 'b'
+    
+    
+    
+    import re
+samples = [
+    'a',
+    'ab',
+    'axyz',
+    'abbbbbb',
+    'wxyzab'
+]
+for sample in samples:
+    r1 = re.findall(r'ab?',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# ['a']
+# ['ab']
+# ['a']
+# ['ab']
+# ['ab']
+    
+***********************************************************************************************
+
+quanntifiers : The '*', '+', and '?' qualifiers are all greedy; they match as much text as possible. 
+                Sometimes this behaviour isn’t desired. so quantifiers are used.
+                
+ syntax :
+ {m} :  Specifies that exactly m copies of the previous RE should be matched; 
+    fewer matches cause the entire RE not to match. 
+    For example, a{6} will match exactly six 'a' characters, but not five.
+
+Example : looking for pattern where it contains 'ab' two times
+
+
+import re
+samples = [
+    'a',
+    'abab',
+    'axyzab',
+    'abbbabbbab',
+    'wxyzab'
+]
+for sample in samples:
+    r1 = re.findall(r'(ab){2}',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# []
+# ['ab']
+# []
+# []
+# []
+
+************************************************************************************************
+{m,n}
+    Causes the resulting RE to match from m to n repetitions of the preceding RE
+    lookin for pattern where it contains 'ab' two to three times in a row
+    
+    import re
+samples = [
+    'ab',
+    'abab',
+    'ababab',
+    'abababab',
+    'abababababab'  
+]
+for sample in samples:
+    r1 = re.findall(r'(ab){2,3}',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# []
+# ['ab']
+# ['ab']
+# ['ab']
+# ['ab', 'ab']          # once ab appear three times next two times so matches twice
+    
+*************************************************************************************************
+
+( ){n} : used for group of pattern appear n number of times
+[ ]{n} : used for range of characters mentioned in square bracket n number of times
+
+
+Example : group 
+import re
+samples = [
+    'can',
+    'nacnac',
+    'cancancan',
+    'nacnacnacnac',
+    'cancancancancan'
+]
+for sample in samples:
+    r1 = re.findall(r'(can){2,3}',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# []
+# []
+# ['can']
+# []
+# ['can', 'can']   
+
+
+
+Example : range [ ]
+
+
+import re
+samples = [
+    'can',
+    'nacnac',
+    'cancancan',
+    'nacnacnacnac',
+    'cancancancancan'
+]
+for sample in samples:
+    r1 = re.findall(r'[can]{2,3}',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# ['can']
+# ['nac', 'nac']
+# ['can', 'can', 'can']
+# ['nac', 'nac', 'nac', 'nac']
+# ['can', 'can', 'can', 'can', 'can']
+
+
+
+
+
+
+
+
+    
+
+*************************************************************************************************
+
+#selecting only first word of a sentence
+
     "^": This expression matches the start of a string
     "w+": This expression matches the alphanumeric character in the string
     
@@ -21,6 +249,31 @@ output :
 
 
 **********************************************************************************************************
+
+find a pattern in which ends in a string
+looking for string which ends with word 'can'
+
+
+import re
+samples = [
+    'catch me if you can',
+    'if you can',
+    'mission impossible',
+    'fast and furious'
+]
+for sample in samples:
+    r1 = re.findall(r'can$',sample)        # r:raw string
+    print(r1)
+
+
+# ouput :
+# ['can']
+# ['can']
+# []
+# []
+
+
+*********************************************************************************************************
 
 
 finding phone numbers patterns  xxx-xxx-xxx or xxx.xxx.xxx
