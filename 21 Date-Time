@@ -51,7 +51,7 @@ month  8
 day  20
 hour  15
 minute  42
-secnd  13
+second  13
 microsecond  289222
 2018-08-20 15:42:13.289290
 timezone  None
@@ -110,10 +110,69 @@ Resolution: 0:00:00.000001
 
 *************************************************************************************************************
 
+# today's date
+import datetime
+print(datetime.date.today()
 
+# output  :  2018-08-21
 
 
 
 
 ***********************************************************************************************************
-timezone conversion
+
+
+# get year , month , date , day and weekday
+import datetime
+print('year ',datetime.date.today().year)
+print('month ',datetime.date.today().month)
+print('day ',datetime.date.today().day)
+print('weekday ',datetime.date.today().weekday())
+
+
+# output  :  
+# year  2018
+# month  8
+# day  21
+# weekday 1             # 0 monday, 1 tuesday
+
+
+**********************************************************************************************
+
+# get min max and resolution of date
+import datetime
+print('min ',datetime.date.min)
+print('max ',datetime.date.max)
+print('resolution ',datetime.date.resolution)
+
+
+# output  :
+# min  0001-01-01
+# max  9999-12-31
+# resolution  1 day, 0:00:00
+
+
+**************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
