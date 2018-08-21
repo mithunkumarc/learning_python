@@ -1,0 +1,47 @@
+    "^": This expression matches the start of a string
+    "w+": This expression matches the alphanumeric character in the string
+    
+# printing first word of a string/sentence
+
+import re
+list = [
+    'Right now, doctors and nurses ',
+    'in the hospital have to make runs ',
+    'every day in order to take care of the patients. '
+]
+for sentence in list:
+    r1 = re.findall(r'^\w+',sentence)        # r:raw string
+    print(r1)
+
+output : 
+['Right']
+['in']
+['every']
+
+
+
+**********************************************************************************************************
+
+
+finding phone numbers patterns  xxx-xxx-xxx or xxx.xxx.xxx
+
+
+import re
+list = [
+    '333-444-555',
+    '333.777.444',
+    '444*5367*5672'
+]
+for phNumbers in list:
+    r1 = re.findall(r'\d{3}[-.]\d{3}[-.]\d{3}',phNumbers)        # r:raw string
+    print(r1)
+
+
+output : 
+['333-444-555']
+['333.777.444']
+[]
+
+
+
+**********************************************************************************************************
