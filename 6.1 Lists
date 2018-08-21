@@ -94,6 +94,15 @@ output :
 
 *************************************************************************
 
+searching an element from list 
+
+list = [3,4,5,6]
+print(3 in list)
+
+# output : True, element 3 exists in list
+
+**************************************************************************
+
 
 enumerate()
 When looping through a sequence, 
