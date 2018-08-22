@@ -1,0 +1,57 @@
+import re
+
+emails = [
+    'CoreyMSchafer@gmail.com',
+    'corey.schafer@university.edu',
+    'corey-321-schafer@my-work.net'
+]
+
+pattern = re.compile(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+')
+
+for email in emails:
+    print(pattern.search(email))
+
+
+
+*********************************************************************************
+
+search()
+
+import re
+
+urls = [
+    'https://www.google.com',
+    'http://coreyms.com',
+    'https://youtube.com',
+    'https://www.nasa.gov'
+]
+
+pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
+for url in urls:
+    print(pattern.search(url))
+
+
+
+# using findall() : find all patterns at once
+
+import re
+
+urls = '''
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
+'''
+
+pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
+
+print(pattern.findall(urls))
+
+
+
+search vs findAll : use search when u are iterating, use findAll for bulk text
+
+
+
+
+*****************************************************************************
