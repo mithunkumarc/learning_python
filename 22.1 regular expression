@@ -1,0 +1,10 @@
+ [ ] : Used to indicate a set of characters.
+ 
+ Characters can be listed individually, e.g. [amk] will match 'a', 'm', or 'k'.
+ 
+ Ranges of characters can be indicated by giving two characters and separating them by a '-', eg : [a-z] or [0-9A-Za-z]
+ 
+ Special characters lose their special meaning inside sets. 
+ For example, [(+*)] will match any of the literal characters '(', '+', '*', or ')'.
+ 
+ 
