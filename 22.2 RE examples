@@ -55,3 +55,31 @@ search vs findAll : use search when u are iterating, use findAll for bulk text
 
 
 *****************************************************************************
+
+
+search vs match functions
+
+
+
+import re
+# digits at the beginning
+print(re.compile('\d').search('9r233errer456'))# try to search \d pattern in entire string
+print(re.compile('\d').match('123r456rer234')) # try to search \d pattern at beginning
+
+#output :
+# <_sre.SRE_Match object; span=(0, 1), match='9'> # 9 is the first matching number
+# <_sre.SRE_Match object; span=(0, 1), match='1'> # 1 is the first matching number
+
+#digits in between text
+print(re.compile('\d').search('r233errer456'))# try to search \d pattern in entire string
+print(re.compile('\d').match('r456rer234')) # try to search \d pattern at beginning
+
+# ouput :
+# <_sre.SRE_Match object; span=(1, 2), match='2'>
+# None , match() cannot find patterns in between
+
+
+
+
+
+
