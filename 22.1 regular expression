@@ -1,10 +1,156 @@
+ \A : Matches Beginning of String
+ 
+ import re
+
+list = [
+    "Ant",
+    "Bright",
+    "Can",
+    "Appeal",
+    "Apparently",
+    "NewApp"
+]
+
+for sample in list:
+    r1 = re.findall(r'\AAp',sample)        # r:raw string
+    print(r1)
+ 
+ 
+ # output :
+ []
+[]
+[]
+['Ap']
+['Ap']
+[]
+ 
+ ******************************************************************************************
+ 
+ 
+ import re
+# Matches Beginning of String: \Z
+
+list = [
+    "Ant Man",
+    "Bright",
+    "Can",
+    "Iron Man",
+    "Apparently",
+    "RainMan"
+]
+
+for sample in list:
+    r1 = re.findall(r'Man\Z',sample)        # r:raw string
+    print(r1)
+    
+    
+# output : 
+
+['Man']
+[]
+[]
+['Man']
+[]
+['Man']
+
+************************************************************************************
+
+
+\w : finds all ASCII characters and underscore, \W(capital w) finds non ASCII and underscore 
+
+import re
+list = [
+    "Ant",
+    "Bright",
+    "_____",
+    "###"
+]
+
+for sample in list:
+    r1 = re.findall(r'\w',sample)        # r:raw string
+    print(r1)
+    
+# output : 
+['A', 'n', 't']
+['B', 'r', 'i', 'g', 'h', 't']
+['_', '_', '_', '_', '_']
+[]
+
+
+***********************************************************************************
+ 
+ \s : finds space 
+ 
+ import re
+list = [
+    "Ant",
+    "Br ight",
+    "__ __",
+    "# #"
+]
+
+for sample in list:
+    r1 = re.findall(r'r\si',sample)        # r:raw string
+    print(r1)
+    # if(len(r1)>0):
+    #     print(sample)
+
+# output : 
+[]
+['r i']
+[]
+[]
+ 
+********************************************************************************************
+
+\d : digit
+\D : non digit
+
+
+import re
+list = [
+    "Ant",
+    "234",
+    "asdf",
+    "000"
+]
+
+for sample in list:
+    r1 = re.findall(r'\d',sample)        # r:raw string
+    print(r1)
+
+# output :
+[]
+['2', '3', '4']
+[]
+['0', '0', '0']
+
+*****************************************************************************************
+
+ 
  [ ] : Used to indicate a set of characters.
  
  Characters can be listed individually, e.g. [amk] will match 'a', 'm', or 'k'.
  
  Ranges of characters can be indicated by giving two characters and separating them by a '-', eg : [a-z] or [0-9A-Za-z]
  
+ ^ inside [] finds all pattern except mentioned. ex : ^5 finds only 5, [^5] finds all except 5
+ 
  Special characters lose their special meaning inside sets. 
  For example, [(+*)] will match any of the literal characters '(', '+', '*', or ')'.
+ 
+ ****************************************************************************************************
+ 
+ 
+ () : capturing group
+ 
+ (Apple) : finds only Apple
+ A(nt|pple) : finds Ant as well as Apple
+ 
+ ***************************************************************************************************
+ 
+ 
+ 
+ 
  
  
