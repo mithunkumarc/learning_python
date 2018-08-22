@@ -1,0 +1,26 @@
+#similar to aop/interceptor/filter
+
+def my_decorator(some_function):
+    def wrapper():
+        print("before main function call")
+        some_function('i am in decorator')
+        print("before main function call")
+    return wrapper
+
+def just_some_function(message):
+    print(message,"...main function...")
+
+
+just_some_function = my_decorator(just_some_function)
+
+just_some_function()
+
+
+output : 
+before main function call
+i am in decorator ...main function...
+before main function call
+
+
+
+
