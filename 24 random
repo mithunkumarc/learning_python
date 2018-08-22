@@ -1,0 +1,127 @@
+
+randrange(stop) : value will lie in the range 0 <= r < stop.
+
+import random
+print(random.randrange(10))
+# output : between 0 - 9
+# randrange(stop) function.
+#
+# Purpose- It will produce a random integer value less than the value 
+# specified by the [stop] argument.
+# If “r” is a random number, then its value will lie in the range 0 <= r < stop.
+
+**********************************************************************************************************
+
+randrange(start,stop)
+
+import random
+print(random.randrange(5,10))
+
+
+# output : prints random numbers between 5 and 10
+
+
+**********************************************************************************************************
+
+randrange(start,stop,step)
+
+import random
+print(random.randrange(10,20,3))
+#output : possible output 10,13,16,19
+
+******************************************************************************************************
+randint()
+
+
+import random
+
+r = random.randint(0, 9)
+print(r)
+# output : any numer between 0 and 9
+
+********************************************************************************************************
+choice()
+
+import random
+
+# Generate a random string from the list of strings
+print(random.choice( ['Python', 'C++', 'Java'] ))
+# output : any string among above mentioned strings
+
+*********************************************************************************************************
+shuffle()
+
+import random
+mylist = [11,21,31,41,51]
+random.shuffle(mylist)
+
+print(mylist)
+
+# output : shuffled list
+
+
+***********************************************************************************************************
+
+sample()
+
+he sample() function randomly 
+selects N items from a given collection (list, tuple, string, dictionary, set) and returns them as a list.
+
+
+# How to use sample() in Python?
+from random import sample
+
+# Select any three chars from a string
+
+print(sample('Python',3))
+
+# Randomly select a tuple of three elements from a base tuple
+
+print(sample((21, 12, -31, 24, 65, 16.3), 3))
+
+# Randomly select a list of three elements from a base list
+
+print(sample([11, 12, 13, 14, -11, -12, -13, -14], 3))
+
+# Randomly select a subset of size three from a given set of numbers
+
+print(sample({110, 120, 130, 140}, 3))
+
+# Randomly select a subset of size three from a given set of strings
+
+print(sample({'Python', 'C++', 'Java', 'Go'}, 3))
+
+
+
+
+*********************************************************************************************
+random()
+
+import random
+# It selects the next random floating point number from the range [0.0, 1.0].
+
+print(random.random())
+
+
+
+**********************************************************************************************
+
+random.uniform(lower, upper) function.
+
+Purpose- It is an extension of the random() function.
+In this, you can specify the lower and upper bounds to generate a random number other than the ones between 0 and 1.
+
+
+import random
+
+lower = 111; upper = 999
+random_float = random.uniform(lower, upper)
+print(random_float)
+
+Output.
+
+#1. 466.63369297787557
+
+#2. 315.3719206118211
+
+***************************************************************************************************
