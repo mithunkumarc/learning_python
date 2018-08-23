@@ -1,0 +1,18 @@
+
+
+The string module includes a versatile Template class with a simplified syntax suitable for editing by end-users. 
+This allows users to customize their applications without having to alter the application.
+
+
+from string import Template
+print(Template('$name born 1879 was a German-born $profession').safe_substitute(name='Albert Einstein',profession='theoretical physicist'))
+
+
+* note : if sentence involves currency $ ,use $$ infront of value, eg ; $$100
+
+
+*******************************************************************************************************
+t = Template('Return the $item to $owner.')
+d = dict(item='unladen swallow',owner='ralph')
+print(t.safe_substitute(d))
+
