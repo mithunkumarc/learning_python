@@ -1,0 +1,13 @@
+eval('print(2+2)')  # must be expression , must give output
+print(eval('5 * 5'))    
+eval('a = 10')      # error : a = 10 , does't give any output
+
+
+******************************************************************
+
+exec('print(47 + 47)')
+exec('a = 10')    # works fine
+print(a)          # output : 10
+
+
+******************************************************************
