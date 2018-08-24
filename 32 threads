@@ -119,3 +119,23 @@ second_thread.start()
 
 ****************************************************************************************
 
+extending thread class
+
+# multithreading example, run another time if you don't see multithreading
+import threading
+
+
+class MyThread(threading.Thread):
+    def run(self):
+        for i in range(10):
+            print(threading.current_thread().name,'thread running',i)
+
+
+MyThread(name='first').start()
+MyThread(name='second').start()
+MyThread(name='third').start()
+
+
+# output :
+mixed order of three threads
+
