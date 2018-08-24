@@ -1,0 +1,120 @@
+Threading is a technique for decoupling tasks which are not sequentially dependent. 
+Threads can be used to improve the responsiveness of applications that accept user input while other tasks run in the background.
+
+
+Example : without using thread
+
+# without threading module
+def task(name):
+    for i in range(10):
+        print(i, name)
+
+
+print('first thread')
+print('second thread')
+
+# after completion of first task,  second thread task starts
+
+
+
+
+***********************************************************************************
+
+
+main thread
+
+by default a program has only one thread which is main thread
+
+
+# main thread example
+import threading
+for i in range(5):
+    print(i,threading.current_thread().name)
+
+# output 
+# 0 MainThread
+# 1 MainThread
+# 2 MainThread
+# 3 MainThread
+# 4 MainThread
+
+
+
+
+************************************************************************************
+
+creating seperate thread
+
+import threading
+
+
+def task():
+    print('i am', threading.current_thread().name, ' thread')
+
+
+print('i am', threading.current_thread().name, 'thread')
+thread = threading.Thread(target=task, name='New Task')         # New Task is a thread name
+thread.start()
+print('i am', threading.current_thread().name, 'thread')
+
+
+# output :
+i am MainThread thread
+i am New Task  thread
+i am MainThread thread
+
+
+
+******************************************************************************************
+
+sending arguments of thread
+
+import threading
+
+
+def task(*args,**kwargs):
+    print(threading.current_thread().name)
+    print('args',args)
+    print('kwargs',kwargs)
+
+
+# sending arguments,
+# target = methodName,
+# name = name of thread,
+# args = list/tuple,
+# kwargs = dictionary
+thread = threading.Thread(target=task,name='NewThread',args=(10,20,),kwargs={'key1':'value1','key2':'value2'})
+thread.start()
+
+# output : 
+NewThread
+args (10, 20)
+kwargs {'key1': 'value1', 'key2': 'value2'}
+
+
+********************************************************************************************
+
+# multithreading example, run another time if you don't see multithreading
+import threading
+import time
+
+def task():
+    for i in range(10):
+        # time.sleep(1)   # in seconds
+        print(i,threading.current_thread().name)
+
+
+first_thread = threading.Thread(target=task,name='First thread')
+first_thread.start()
+second_thread = threading.Thread(target=task,name='second thread')
+second_thread.start()
+
+
+#output : 
+ mixed order of first and second thread
+
+
+
+
+****************************************************************************************
+
