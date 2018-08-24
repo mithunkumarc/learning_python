@@ -1,6 +1,7 @@
 Threading is a technique for decoupling tasks which are not sequentially dependent. 
 Threads can be used to improve the responsiveness of applications that accept user input while other tasks run in the background.
 
+Examples of using built in Thread object
 
 Example : without using thread
 
