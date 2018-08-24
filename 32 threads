@@ -139,3 +139,29 @@ MyThread(name='third').start()
 # output :
 mixed order of three threads
 
+
+*************************************************************************************
+extending class with properties name and color
+
+
+import threading
+
+
+class MyThread(threading.Thread):
+    def __init__(self, name, color):
+        threading.Thread.__init__(self)             # imp : call parent class constructor
+        self.name = name
+        self.color = color
+
+    def run(self):
+        for i in range(10):
+            print(threading.current_thread().name,i,self.color)
+
+
+t1 = MyThread(name='first',color='green')
+t1.start()
+t2 = MyThread(name='second',color='yellow')
+t2.start()
+
+# output : mixed order of three threads
+
