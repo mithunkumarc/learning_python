@@ -165,3 +165,25 @@ t2.start()
 
 # output : mixed order of three threads
 
+
+*************************************************************************************8
+
+# join()  This blocks the calling thread until the thread whose join() method is called is terminated.
+import threading
+
+def task():
+    for i in range(10):
+        print(threading.current_thread().name,i)
+
+
+t1 = threading.Thread(target=task,name='T1')
+t2 = threading.Thread(target=task,name='T2')
+t1.start()
+t1.join()
+# without join() t2 will not wait for t1 to get over
+t2.start()
+
+
+# output : t1 completes first and then t2 starts
+
+************************************************************************************************
