@@ -158,3 +158,19 @@ print(dictionary)
 
 # output
 # {'Math': ['beginner', 'intermediate', 'advanced'], 'Science': ['beginner', 'intermediate', 'advanced']}
+
+
+*******************************************************************
+
+
+
+dictionary accepts immutable objects as key, mutable objects as key gives unhashable error
+
+
+dict = {(1,2,3),'world'}
+print('dictionary accepts tuple as key')
+dict = {[1,2,3],'hello'}
+print('this line won\'t gets printed as dictionary rejects mutable obj as key')
+
+
+**************************************************************************
