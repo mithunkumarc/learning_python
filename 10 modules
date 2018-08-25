@@ -126,3 +126,32 @@ import <modulename>
 import importlib
 //find out if module is changed, then reload
 importlib.reload(<modulename>)
+
+
+*****************************************************************************
+
+implcitly available variables/modules
+
+# prints current file name
+print(__file__)
+
+
+#points to builtins module so no need to import builtins module
+#use dir(__builtins__) to list all functions defined in this module
+print(__builtins__)
+
+#document string, use modulename.__doc__ when u want to print other module
+__doc__='''i am a doc'''
+print(__doc__)  # prints '''i am a doc'''
+
+#if current module executed directly, prints __main__ or else 'current module name'
+print(__name__)
+
+#if you run a module directly prints none
+#if your run import current module which is in package2
+#prints package2
+#points to package of imported file
+print(__package__)
+
+
+*************************************************************
