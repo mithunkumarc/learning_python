@@ -110,7 +110,7 @@ lets say __init__.py is empty
 
 test.py
 from package1 import *
-Tiger.sound()           # error because Tiger is not imported in this kind or import, alternate: import package1.Tiger
+Tiger.sound()           # error because Tiger is not imported in this kind of import, alternate: import package1.Tiger
 
 so use __all__ variable to include modules
 
