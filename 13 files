@@ -43,3 +43,17 @@ f = open('cities','r+')
 # for reading
 # for city in f.readlines():
 #     print(city)
+
+
+
+
+
+************************************************************
+
+printing multiple line with next line character
+
+
+file = open('input.txt','w')
+file.writelines('\n'.join(['first line','second line']))
+
+*************************************************************
