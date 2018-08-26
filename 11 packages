@@ -135,9 +135,12 @@ list = [1,2,3]
 
 Tiger.py
 import pakcage1
-print(list)     # [1,2,3]
+print(package1.list)     # [1,2,3]
 
+--or--
 
+from package1 import *
+print(list)
 
 
 
