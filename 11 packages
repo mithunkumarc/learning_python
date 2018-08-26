@@ -95,3 +95,65 @@ output : added modules
 
 
 
+***********************************************************************************
+
+importance of __all__ variable : 
+in init.py we can include all modules of current package
+
+package1
+        > __init__.py
+        > Tiger.py
+        > Lion.py
+
+test.py wants to use modules from package1
+lets say __init__.py is empty
+
+test.py
+from package1 import *
+Tiger.sound()           # error because Tiger is not imported in this kind or import, alternate: import package1.Tiger
+
+so use __all__ variable to include modules
+
+__init__.py
+__all__ = [ 'Tiger' , 'Lion' ] 
+
+
+go back to test.py
+
+from package1 import *
+Tiger.sound()
+
+# no error 
+
+*******************************************************************
+
+variables and functions defined in __init__.py file availabe 
+in all modules of same package, to make use of it  , import currentPackageName
+
+__init__.py( with in package1)
+list = [1,2,3]
+
+Tiger.py
+import pakcage1
+print(list)     # [1,2,3]
+
+
+
+
+
+******************************************************************
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
