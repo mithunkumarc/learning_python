@@ -31,7 +31,7 @@ syntax will be
 
 ***************************************************************************************
 
-Multiple inheritance
+Multiple inheritance allowed in python
 
 class Electronics:
     def __init__(self,processor):
@@ -53,6 +53,33 @@ print(ipod.numberOfSpeakers)
 # output :
 ipro
 4
+
+
+***********************************************************
+
+
+Multiple inheritance :  method with same name inherited from multiple parent classes
+
+# in multiple inheritance , if two methods with same name inherited from multiple parent classes to child 
+#     class, method of first inherited class will be picked
+
+class A:
+    def method(self):
+        print('a')
+
+class B:
+    def method(self):
+        print('b')
+
+class C(B,A):
+    pass
+
+c = C()
+c.method()
+
+output : prints b, because first inherited class is B
+
+
 
 **********************************************************
 
