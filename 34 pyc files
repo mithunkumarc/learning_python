@@ -1,0 +1,30 @@
+python3 stores pyc files in __pycache__ folder
+
+location of __pycache__ folder is same as of source files
+
+lets say we are running test.py module which imports calculator.py module
+
+calculator.pyc file will be generated, no pyc file is created for test mode as it is directly compiled and executed directly.
+
+if you run test.py again, calculator.pyc file will be generated again unless you change the source code of calculator.py
+
+
+>> same folder 
+             test.py
+             calculator.py
+  
+  after running test.py
+    
+  >> same folder  
+            test.py
+            calculator.py 
+            __pycache__
+                    calcualtor.pyc    # only calculator pyc generator because , this file is being imported in test module
+                    
+                    
+   
+   
+   
+   pyc files are created for those modules which are being imported in other modules
+                    
+              
