@@ -209,6 +209,11 @@ Objects of Boolean type may have one of two values, True or False:
 >>> type(False)
 <class 'bool'>
 
+>> True + True 
+>>> 2
+
+# True is equal to 1 and False equal to zero
+
 ********************************************************************
 
 integers, string , float and tuples are immutalbe
