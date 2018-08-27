@@ -50,3 +50,20 @@ color black
 
 
 *****************************************************************************
+
+__format__ function :
+
+class Car:
+    def __init__(self,brand,color):
+        self.brand = brand
+        self.color = color
+
+    def __format__(self, format_spec):
+        return f'the brand of car is {self.brand} and color is {self.color}'
+
+c = Car('toyota','blue')
+print(c.__format__(c))
+
+# output  : the brand of car is toyota and color is blue
+
+***************************************************************
