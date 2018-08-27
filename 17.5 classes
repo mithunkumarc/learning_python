@@ -22,3 +22,31 @@ class Car:
 c = Car('yellow','toyota')
 print(c.__str__())
 print(c.__repr__())
+
+
+*******************************************************************
+
+__setattr__ and __getattr__ functions
+
+to create new attributes for an object use : __setattr__ # specific to current object, not shared to other objects
+to get value of an existing attribute : __getattr__ 
+
+
+class Car:
+    def __init__(self,brand):
+        self.brand = brand
+
+c = Car('toyota')
+print('brand',c.__getattribute__('brand'))
+
+# creating new attribute for Car
+c.__setattr__('color','black')
+print('color',c.__getattribute__('color'))
+
+# output : 
+
+brand toyota
+color black
+
+
+*****************************************************************************
