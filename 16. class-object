@@ -5,7 +5,7 @@ Class instances can also have methods (defined by its class) for modifying its s
 
 class Car:
     '''simple class'''
-    brandName = 'Toyota'
+    brandName = 'Toyota'            # brandname and modelNumber are class variables , will be discussed later
     modelNumber = 234
 
     def start(self):
