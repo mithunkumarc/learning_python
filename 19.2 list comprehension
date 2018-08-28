@@ -1,0 +1,27 @@
+when we have to choose generator over list? 
+ans . while generating large list of data
+
+
+
+# using list
+
+ import time
+ started = time.time()
+ list = [x*2 for x in range(1000000,9000000)]  # list of numbers between 1000000 and 9000000 
+ print(time.time()-started)
+
+# output :
+# taking 0.62343.. seconds to generate list of numbers*2 between 1000000 and 9000000
+
+
+# using generator
+# generator works on demand , on call of next function ,it gives the next number 
+  
+  started = time.time()
+  generator = (x*2 for x in range(1000000,9000000))   #() indicates generator
+  print(time.time()-started)
+
+#takes almost zero time
+#taking 0.00000178 seconds to create generator object(not list of numbers)
+
+# print(generator.__next__()), get one by one element by calling next function
