@@ -28,7 +28,7 @@ for sample in list:
  
  
  import re
-# Matches Beginning of String: \Z
+# Matches ending of String: \Z
 
 list = [
     "Ant Man",
