@@ -93,10 +93,15 @@ for number in generateEvenNumbers():
 
 ***************************************************************************
 
-generator expression
-
+generator expression :
 print(sum(x*x for x in range(0,10)))   # ouput : 285, sum built in function
 
+
+
+generator expression with lambda expression : 
+product = lambda x:x*x
+gen = sum(product(x) for x in range(0,10))
+print(gen)
 
 
 
