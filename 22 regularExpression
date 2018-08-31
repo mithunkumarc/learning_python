@@ -206,7 +206,7 @@ for sample in samples:
     print(r1)
 
 
-# ouput :
+# ouput : group of 2 or 3 characters which contain c, a and n letter 
 # ['can']
 # ['nac', 'nac']
 # ['can', 'can', 'can']
