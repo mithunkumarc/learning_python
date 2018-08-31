@@ -100,7 +100,35 @@ print(sum(x*x for x in range(0,10)))   # ouput : 285, sum built in function
 
 
 
+************************************************************************
+handling stop iteration error
+
+list=[10,20,30,40]
+def generator():
+    for i in list:
+        yield i
 
 
+g = generator()
+def printNextElement():
+    try:
+        print(g.__next__())
+    except:
+        print('elements over')
 
- 
+printNextElement()
+printNextElement()
+printNextElement()
+printNextElement()
+printNextElement()
+printNextElement()
+printNextElement()
+
+# output : 
+10
+20
+30
+40
+elements over
+elements over
+elements over
