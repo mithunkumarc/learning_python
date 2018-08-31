@@ -17,6 +17,7 @@ scope_test()
 
 non local
 Nonlocal variable are used in nested function whose local scope is not defined.
+non local variable values are changed in local context using non local variables
 This means, the variable can be neither in the local nor the global scope.
 
 Ex :
@@ -60,20 +61,23 @@ outer : nonlocal
 *********************************************************************************
 global : 
 In Python, a variable declared outside of the function or in global scope is known as global variable. 
-This means, global variable can be accessed inside or outside of the function.
+To change global variable value from local context, use global keyword
 
+me = 'iknow'
+def main():
+    me = 'what'                 # this is not global variable, so no change to this variable
+    def block():
+        global me
+        me = "you don't know"   # changing the value of global 'me' variable
+    block()
+    print('main me',me)         # prints 'what'
 
-def scope_test():
-    def do_global():
-        global spam
-        spam = 'global spam'
-    spam = 'test spam'
-    do_global()
+main()
+print('global me',me)           # prints 'you don't know' instead of 'iknow'
 
-scope_test()
-print(spam)     # no error, spam has global scope
-
-# output : global spam
+output : 
+main me what
+global me you don't know
 
 
 
