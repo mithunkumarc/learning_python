@@ -40,5 +40,36 @@ KeyError: 'primary'
 
 
 
+********************************************************************************
+
+by default garbage collection is enabled
+
+import gc
+print(gc.isenabled())
+print(gc.enable()) # to enable
+print(gc.disable()) # to disable
+
+
+**************************************************
+
+is_tracked() : 
+As a general rule, instances of atomic types aren’t tracked and instances of non-atomic types 
+(containers, user-defined objects…) are.
+
+>>> gc.is_tracked(0)
+False
+>>> gc.is_tracked("a")
+False
+>>> gc.is_tracked([])
+True
+>>> gc.is_tracked({})
+False
+>>> gc.is_tracked({"a": 1})
+False
+>>> gc.is_tracked({"a": []})
+True
+
+
+***********************************************************************************
 
 *  : __repr__ should return a printable representation of the object/ (similar to toString)
