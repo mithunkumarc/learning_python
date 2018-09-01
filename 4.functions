@@ -309,7 +309,7 @@ Do nothing, but document it.
 
     No, really, it doesn't do anything.
     
- --next--
+ ***********************************************************************************************
  
  Function Annotations :
  
@@ -333,3 +333,49 @@ Annotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str
 Arguments: spam eggs
 'spam and eggs'
 
+
+* NOTE ; use symbol -> for return type, and : for parameter/variable.
+
+
+**********************************************************************************************
+
+typing module to help mention annotation type
+
+
+
+from typing import List
+
+def return_list() -> List:
+    return list(range(2,10))
+
+print(return_list())
+
+
+--next--
+
+
+class User:
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+
+def return_user() -> User:
+    return User('rajat',123)
+
+user = User()
+
+print(user.name,user.id)
+
+--next--
+
+type alias 
+
+from typing import List
+items = List[str]
+def get_list() -> items:
+    return ['item1','item2','item3']
+print(get_list())
+
+#output : ['item1', 'item2', 'item3']
+
+*****************************************************************************
