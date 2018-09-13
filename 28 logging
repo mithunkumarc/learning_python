@@ -15,3 +15,9 @@ logger = logging.getLogger('test')
 
 
 # output : applog file will be created under current project folder
+
+21:11:05,978 root DEBUG Debugging information
+21:11:05,979 root INFO Informational message
+21:11:05,979 root WARNING Warning:config file server.conf not found
+21:11:05,979 root ERROR Error occurred
+21:11:05,979 root CRITICAL Critical error -- shutting down
