@@ -12,6 +12,7 @@ logging.error('Error occurred')
 logging.critical('Critical error -- shutting down')
 
 logger = logging.getLogger('test')
+print(logger.name) # prints test
 
 
 # output : applog file will be created under current project folder
@@ -21,3 +22,12 @@ logger = logging.getLogger('test')
 21:11:05,979 root WARNING Warning:config file server.conf not found
 21:11:05,979 root ERROR Error occurred
 21:11:05,979 root CRITICAL Critical error -- shutting down
+
+
+note:
+#name : name of the logger , root is the parent logger, in above example ,test is the logger which is a 
+child of root logger.
+The Python logging module organizes loggers in a hierarchy. 
+All loggers are descendants of the root logger. 
+Each logger passes log messages on to its parent.
+so in logging file, name will be assigned with value root
