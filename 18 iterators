@@ -17,10 +17,24 @@ it = iter(words)
 print(it.__next__())
 print(it.__next__())
 
+
+# or
+
+it = iter(words)
+first_element = it.__next__()
+print(first_element,words[first_element])
+second_element = it.__next__()
+print(second_element,words[second_element])
+
+
+
 # or
 
 print(next(it))
 print(next(it))
+
+
+
 
 
 # StopIteration exception will be thrown when you run out of elements
