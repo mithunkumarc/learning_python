@@ -60,13 +60,24 @@ As a general rule, instances of atomic types aren’t tracked and instances of n
 False
 >>> gc.is_tracked("a")
 False
+
+# Tuples containing only immutable objects 
+# (integers, strings etc, and recursively, tuples of immutable objects) do not need to be tracked. 
+
+>>> gc.is_tracked((1,2,3))  #false
+
 >>> gc.is_tracked([])
 True
+
+Dictionaries containing only immutable objects also do not need to be tracked. Dictionaries are untracked when created. 
 >>> gc.is_tracked({})
 False
 >>> gc.is_tracked({"a": 1})
 False
->>> gc.is_tracked({"a": []})
+
+If a tracked item is inserted into a dictionary (either as a key or value), the dictionary becomes tracked. 
+
+>>> gc.is_tracked({"a": []})    #list is a trackable object
 True
 
 
