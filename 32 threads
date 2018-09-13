@@ -11,8 +11,8 @@ def task(name):
         print(i, name)
 
 
-print('first thread')
-print('second thread')
+print('first task')
+print('second task')
 
 # after completion of first task,  second thread task starts
 
