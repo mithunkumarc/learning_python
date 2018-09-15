@@ -35,3 +35,24 @@ a.eat()
 #ouput : e being exactly equivalent to eat. Note that this practice usually only serves to confuse the reader of a program.
 eating
 eating
+
+************************************************************************************
+* adding function to existing class using __setattr__ function
+
+
+class Calculator:
+    def square(self,x):
+        return x*x
+
+
+a = Calculator()
+
+
+def cube(x):
+    return x*x*x    #for complex code ,use seperate function
+
+a.__setattr__('get_cube',lambda x:cube(x))
+#a.__setattr__('get_cube',lambda x:x*x*x) #use single expression for simple code
+
+print(a.get_cube(3))
+#output : 27
