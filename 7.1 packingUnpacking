@@ -1,0 +1,29 @@
+def add(*args):         # packing : arguments accepted as tuple
+    sum = 0
+    for a in args:
+        sum = sum + a
+    return sum
+
+# packing : arguments accepted as tuple
+print(add(3,6,9))
+
+***************************************************************************************
+#unpacking
+def multiplication(a,b,c):        #unpacking : arguments accepted as individual elements
+    product =a * b * c
+    return product
+
+t = (3,6,9)
+
+#unpacking : elements of tuple ,unpacked as individual elements
+print(multiplication(*t))
+
+****************************************************************************************
+
+#convert list to tuple
+mytuple = tuple([2,3,4])
+print(type(mytuple))
+
+#convert tuple to list
+mylist = list((2,3,4))
+print(type(mylist))
