@@ -1,0 +1,22 @@
+#adding attribute to class from outside, can be an example of monkey patching
+
+
+class Car:
+    pass
+
+c = Car()
+c.__setattr__('color','white')
+print(c.__getattribute__('color'))
+c.__setattr__('start',lambda :print('starting'))    #lambda with no parameter
+
+
+def sq(x):
+    return x*x
+
+c.__setattr__('square',lambda x:sq(x))    #call function after declaring,
+
+
+print(c.square(5))
+c.start()
+
+
