@@ -1,0 +1,100 @@
+
+dir() function will return the list of global variables available to current module.
+it also list the functions and variables from other imported modules.
+
+print(dir())
+
+['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__]
+
+
+
+**********************************************************************************************************************
+lets say we are in example module we are importing Calculator module and prints 
+['__cached__','__file__', '__loader__', '__name__', '__package__', '__spec__]
+
+example.py
+from newpackage import Calculator
+print(Calculator.__spec__)                  #prints specification of module
+print(Calculator.__cached__)                #points to compiled version of Calculator (Calculator.cpython-36.pyc)
+print(Calculator.__file__)                  #prints path of Calculator module
+print(Calculator.__name__)                  #prints module name with package name
+print(Calculator.__loader__)                #prints loader object anme
+print(Calculator.__package__)               #prints package name of Calculator
+
+# output 
+1 . __spec__ : prints specification of module
+ModuleSpec(name='newpackage.Calculator', 
+loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f0afb3f5d30>, 
+origin='/home/mithun/Documents/pythonprograms/testingnew/newpackage/Calculator.py')
+
+2. __cached__ : points to compiled imported module 
+/home/mithun/Documents/pythonprograms/testingnew/newpackage/__pycache__/Calculator.cpython-36.pyc
+
+3. __file__ : path
+/home/mithun/Documents/pythonprograms/testingnew/newpackage/Calculator.py
+
+4.__name__ : module name with package name
+newpackage.Calculator
+
+5. ___loader__ : prints loader object name
+<_frozen_importlib_external.SourceFileLoader object at 0x7f0afb3f5d30>
+
+6.__package__ : package name
+newpackage
+
+
+
+
+**********************************************************************************************************************
+
+
+1.__annotations__
+prints list of annotation from a current module
+
+ex: declare a variable 
+count : int = 10
+print(__annotations__)
+# see output
+Note : method level annotion refer functions
+
+
+2.__builtins__ : 
+this variable points to builtins module, all classes functions available in builtins can be used in current module
+to see all components of builtins
+
+import builtins as b
+for d in dir(b):
+    print(d)
+
+3.__cached__ : (may be) points to __pycache__ 
+
+4.__doc__ : print(__doc__) prints module leve doc string. 
+you can print method and class level doc string using : methodName.__doc__ and className.__doc__ also
+
+
+5.__file__ : prints current module file path
+
+6.__loader__ : prints source file object loader name
+
+7.__name__ : prints main/module_name depends on how you run module. (directly or by importing)
+
+8.__package__ : initialize this variable with propert package name , will be helpful in resolving modules with same name
+
+
+package1
+  > module1.py 
+        __package__ = 'com.package1.module1'
+
+package2
+  > module2.py 
+        __package__ = 'com.package2.module2'
+  
+9.__spec__ : if your directly run current module you will get None.
+if you import current module to some other mode, there if your print __spec__ you will get
+
+ModuleSpec(name='newpackage.Calculator'
+, loader=<_frozen_importlib_external.SourceFileLoader object at 0x7ff2df569b00>,
+origin='/home/mithun/Documents/pythonprograms/testingnew/newpackage/Calculator.py')
+
+
+
