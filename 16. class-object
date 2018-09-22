@@ -86,10 +86,36 @@ print(s.items)
 
 
 ********************************************************************************
+Two ways to initialize object
+1.setter methods
+2.init function
+
+setter methods to initialize object
+
+class person:
+    '''using setter methods to initialze object'''
+    def set_name(self,name):
+        self.name = name
+
+    def set_age(self,age):
+        self.age = age
+
+p1 = person()
+p1.set_name('rajat')
+p1.set_age(25)
+print(p1.name,p1.age)
 
 
+#using init function to initialize
 
 
+class Student():
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+
+s1 = Student('sharath',15)
+print(s1.name,s1.id)
 
 
 
