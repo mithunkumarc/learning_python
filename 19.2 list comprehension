@@ -25,3 +25,50 @@ ans . while generating large list of data
 #taking 0.00000178 seconds to create generator object(not list of numbers)
 
 # print(generator.__next__()), get one by one element by calling next function
+
+
+************************************************************************************************************************
+generator expression sytax:
+
+1. return generator object : 
+(generator_expession for variable in range(start,end)) 
+
+
+2. returns list of numbers
+[generator_expession for variable in range(start,end)] 
+
+
+Note : 
+use () braces to return generator object , use [] to get list of elements
+
+******************************************************************************************
+
+'''
+    list of numbers using generator function
+    generator generate number when you call next on generator object
+    example for lazy action    
+'''
+
+generator = (x for x in range(1,10))
+print(type(generator))
+print(generator)
+# <class 'generator'>
+# <generator object <genexpr> at 0x7feaa25b3bf8>
+# to get numbers from generator call next() on generator object
+
+print(generator.__next__()) //generator obj generator numbers when you call __next__()
+print(generator.__next__())
+
+*****************************************************************************************************
+# list will generate as soon as you execute below line
+# example for early action
+# performance hit , program has to wait until list generate all numbers
+
+list = [x for x in range(1,10)]
+print(type(list))
+print(list)
+print(len(list)) # output 9 : prooves that generates all numbers when u create list using generator expression
+# <class 'list'>
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
