@@ -1,0 +1,20 @@
+list set and tuple are interchangeble
+while changing list,tuple to set, you will lose duplicate objects
+
+list_to_set = set([1,2,3])
+print(type(list_to_set))
+
+tuple_to_set = set((1,2,3))
+print(type(tuple_to_set))
+
+list_to_tuple = tuple([1,2,3])
+print(type(list_to_tuple))
+
+tuple_to_list = list((1,2,3))
+print(type(tuple_to_list))
+
+set_to_list = list({1,2,3})
+print(type(set_to_list))
+
+set_to_tuple = tuple({1,2,3})
+print(type(set_to_tuple))
