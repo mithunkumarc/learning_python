@@ -13,11 +13,26 @@ Example :
 
 
 class Animal:
+    def __init__(self):
+        self.name = 'animal'
+
+class Dog(Animal):                      //dog is reusing the value of name from animal
+    pass                                //if you want dog to have its own value , use init method to initialize
+
+d = Dog()
+print(d.name)                         
+//output : animal
+
+
+Example 2 :
+
+
+class Animal:
     def __init__(self,name):  
         self.name = name
 
 class Dog(Animal):
-    def __init__(self,name,color):
+    def __init__(self,name,color):                //to initialize dog with its own values
         self.color = color
         self.name = name
 
