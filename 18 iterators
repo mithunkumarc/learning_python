@@ -49,6 +49,8 @@ print(next(it))         # StopIteration error
 ************************************************************************************
 To avoid StopIteration error
 
+*******example 1 with dictionary********
+
 words = {'coffee':'hot beverage','red bul':'energy drink'}
 it = iter(words)
 
@@ -62,6 +64,35 @@ def pickWords():
 print(pickWords())    # hot beverage
 print(pickWords())    # red bul
 print(pickWords())    # output : no more elements
+
+****example 2 for list******
+
+list = [2,4,6]
+count = 0
+it = iter(list)
+
+def give_me_number():
+    global count
+    if count < len(list):
+        count = count + 1
+        return next(it)
+    else:
+        return 'you have reached end of list'
+
+
+print(give_me_number())
+print(give_me_number())
+print(give_me_number())
+print(give_me_number())
+print(give_me_number())
+
+output : 
+2
+4
+6
+you have reached end of list
+you have reached end of list
+
 
 *****************************************************************************************
 
