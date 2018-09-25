@@ -19,4 +19,14 @@ c.__setattr__('square',lambda x:sq(x))    #call function after declaring,
 print(c.square(5))
 c.start()
 
+******************************************************************************************************
 
+static method
+
+class Animal:
+    @staticmethod
+    def zoo_name():
+        return 'mysore zoo'
+
+
+print(Animal.zooname())
