@@ -49,3 +49,14 @@ This is denoted as "f(n) = Θ(g(n))"
 
          log2 n ≤ i
 
+
+
+#### practical examples of BIG 0 notation
+
+    Practical Examples
+
+    O ( n ) {\displaystyle O(n)} O(n): printing a list of n {\displaystyle n} n items to the screen, looking at each item once.
+
+    O ( log 2 ⁡ n ) {\displaystyle O(\log _{2}{n})} {\displaystyle O(\log _{2}{n})}", taking a list of items, cutting it in half repeatedly until there's only one item left.
+
+    O ( n 2 ) {\displaystyle O(n^{2})} O(n^{2}): taking a list of n items, and comparing every item to every other item.
