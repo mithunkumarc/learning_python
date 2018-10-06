@@ -52,11 +52,10 @@ This is denoted as "f(n) = Θ(g(n))"
 
 
 #### practical examples of BIG 0 notation
+##### constants are ignored, lower order variable ignored : example , n^2 + n , n is ignored    
 
-    Practical Examples
+    O ( n ) : printing a list of n , looking at each item once.
 
-    O ( n ) {\displaystyle O(n)} O(n): printing a list of n {\displaystyle n} n items to the screen, looking at each item once.
+    O ( log  ⁡ n )(base 2) taking a list of items, cutting it in half repeatedly until there's only one item left.
 
-    O ( log 2 ⁡ n ) {\displaystyle O(\log _{2}{n})} {\displaystyle O(\log _{2}{n})}", taking a list of items, cutting it in half repeatedly until there's only one item left.
-
-    O ( n 2 ) {\displaystyle O(n^{2})} O(n^{2}): taking a list of n items, and comparing every item to every other item.
+    O ( n ^ 2 ) taking a list of n items, and comparing every item to every other item.
