@@ -14,3 +14,38 @@ Big Omega describes the best that can happen for a given data size.
 Theta is basically saying that the function, f(n) is bounded both from the top and bottom by the same function, g(n).
 f(n) is theta of g(n) if and only if f(n) = O(g(n)) and f(n) = Ω(g(n))
 This is denoted as "f(n) = Θ(g(n))"
+
+
+#### log(n) explanation : applcation divide and conquer, binary search. reducing input and operate
+
+     Repeatedly dividing by a constant
+
+     Take any number n; say, 16. 
+     How many times can you divide n by two before you get a number less than or equal to one? For 16, we have that
+
+     16 / 2 = 8
+      8 / 2 = 4
+      4 / 2 = 2
+      2 / 2 = 1
+
+     Notice that this ends up taking four steps to complete. 
+     Interestingly, we also have that log2 16 = 4. Hmmm... what about 128?
+
+     128 / 2 = 64
+      64 / 2 = 32
+      32 / 2 = 16
+      16 / 2 = 8
+       8 / 2 = 4
+       4 / 2 = 2
+       2 / 2 = 1
+
+     This took seven steps, and log2 128 = 7. Is this a coincidence? Nope! There's a good reason for this. 
+     Suppose that we divide a number n by 2 i times. 
+     Then we get the number n / 2i. If we want to solve for the value of i where this value is at most 1, we get
+
+         n / 2i ≤ 1
+
+         n ≤ 2i
+
+         log2 n ≤ i
+
