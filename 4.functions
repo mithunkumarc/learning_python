@@ -39,12 +39,25 @@ invalid : score(matchNumber=20,30)  #error : two values
 score(113,matchNumber=112)   #error
 #  got multiple values for argument 'matchNumber' : runtime
 
+********************************************************************************************************
+
+postional argument and paramerters must be at the left, default arguments must be at right in list
+
+
+def function_name(element1,*element2,**element3):
+    print(element1,element2,element3)
+    print(type(element3))
 
 
 
+function_name([123,234],33,44,55,city='bangalore',state='ka')
+
+output : element1 : [123,234], element2(tuple) : (33,44,55), element3(dict) : {city : 'bangalore', state: 'ka'}
 
 
-*********************************************************************************************************
+******************************************************************************************************************
+
+
 * for tuples
 ** for dictionary
 
