@@ -5,7 +5,7 @@
 5.'w' for only writing (an existing file with the same name will be erased), 
 and 
 6.'a' opens the file for appending; any data written to the file is automatically added to the end.
-7.'r+' opens the file for both reading and writing. 
+doubt : 7.'r+' opens the file for both reading and writing. 
 8.The mode argument is optional; 'r' will be assumed if it’s omitted.
 
 
