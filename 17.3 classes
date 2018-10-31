@@ -95,7 +95,35 @@ c.method()
 
 output : prints b, because first inherited class is B
 
+***********************************************************
+#### multiple inheritance example
 
+class Electronics:
+    def __init__(self):
+        self.countBatteries = 0
+
+    def charge(self):
+        print("universal charger")
+
+class Mobile:
+    def __init__(self):
+        self.color = None
+        self.countBatteries = 1
+
+    def call(self):
+        print("call")
+    def charge(self):
+        print("mobile charger")
+
+class SamsungS7(Electronics,Mobile):
+    pass
+
+s7 = SamsungS7()
+s7.call()
+s7.charge()
+s7.color = "white"
+print(s7.color)
+print(s7.countBatteries)
 
 **********************************************************
 
