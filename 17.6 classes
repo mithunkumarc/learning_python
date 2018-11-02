@@ -29,4 +29,24 @@ class Animal:
         return 'mysore zoo'
 
 
-print(Animal.zooname())
+print(Animal.zoo_name())
+
+*****************************************************************************
+
+class Student:
+    school_name = "kendriya vidyalaya" #staic variable
+    def __init__(self,name):
+        self.name = name
+
+    @staticmethod
+    def what_is_my_shool_name(self,sn):
+        print(f"school name of {self.name} is {sn}")
+
+
+
+
+s1 = Student("kaushal")
+s2 = Student("vinay")
+Student.school_name = "kendriya vidyalaya, Amritsar"
+Student.what_is_my_shool_name(s1,Student.school_name)
+Student.what_is_my_shool_name(s2,Student.school_name)
