@@ -26,3 +26,7 @@ interpreter : byte code to machine code and executes : so python considered as s
 pyc file of directly executed module will not be generated.
 
 only imported module pyc files are generated
+
+---
+
+#### check interpreter version to use latest features, set latest interpreter in editor
