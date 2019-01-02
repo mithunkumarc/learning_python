@@ -11,3 +11,14 @@ quick start tutorial :
 some examples : 
 
         https://www.analyticsindiamag.com/the-most-important-numpy-functions-you-should-know-when-learning-python/
+
+
+
+#### jupyter notebook install
+
+
+        link : https://jupyter.org/install
+
+        python3 -m pip install --upgrade pip
+        python3 -m pip install jupyter
+        jupyter notebook
