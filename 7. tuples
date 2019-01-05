@@ -4,7 +4,7 @@ tuples, list and range belongs to sequences type.
 lists are mutable where as tuples are immutable , but tuples contains mutable objects.
 
 Ex : 
-  t = 12345, 54321, 'hello'
+  t = 12345, 54321, 'hello'     # tuples can be created without ()
   print(t[0])
   print(t)
 
