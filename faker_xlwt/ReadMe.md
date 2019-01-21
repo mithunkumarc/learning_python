@@ -40,3 +40,6 @@ xlrd : reading excel file
             for j in range(0,sheet.ncols):
                 print(sheet.cell(i,j).value+'\t')
             print('\n')
+
+
+        source : https://riptutorial.com/python/example/23044/read-the-excel-data-using-xlrd-module
