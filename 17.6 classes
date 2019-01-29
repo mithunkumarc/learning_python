@@ -1,52 +1,53 @@
-#adding attribute to class from outside, can be an example of monkey patching
+#### adding attribute to class from outside, can be an example of monkey patching
 
 
-class Car:
-    pass
+            class Car:
+                pass
 
-c = Car()
-c.__setattr__('color','white')
-print(c.__getattribute__('color'))
-c.__setattr__('start',lambda :print('starting'))    #lambda with no parameter
-
-
-def sq(x):
-    return x*x
-
-c.__setattr__('square',lambda x:sq(x))    #call function after declaring,
+            c = Car()
+            c.__setattr__('color','white')
+            print(c.__getattribute__('color'))
+            c.__setattr__('start',lambda :print('starting'))    #lambda with no parameter
 
 
-print(c.square(5))
-c.start()
+            def sq(x):
+                return x*x
 
-******************************************************************************************************
-
-static method
-
-class Animal:
-    @staticmethod
-    def zoo_name():
-        return 'mysore zoo'
+            c.__setattr__('square',lambda x:sq(x))    #call function after declaring,
 
 
-print(Animal.zoo_name())
-
-*****************************************************************************
-
-class Student:
-    school_name = "kendriya vidyalaya" #staic variable
-    def __init__(self,name):
-        self.name = name
-
-    @staticmethod
-    def what_is_my_shool_name(self,sn):
-        print(f"school name of {self.name} is {sn}")
+            print(c.square(5))
+            c.start()
 
 
+---
+
+#### static method : doesn't require self(current_object) argument
+
+#### using @staticmethod
+
+            class Animal:
+                name = 'animal'         # static variable
+                @staticmethod
+                def zoo_name():
+                    return 'mysore zoo'
 
 
-s1 = Student("kaushal")
-s2 = Student("vinay")
-Student.school_name = "kendriya vidyalaya, Amritsar"
-Student.what_is_my_shool_name(s1,Student.school_name)
-Student.what_is_my_shool_name(s2,Student.school_name)
+            print(Animal.zoo_name())
+
+
+---
+
+#### using staticmethod()
+
+                class Calculator:
+                    def multiplyNums(x, y):
+                        return x + y
+
+                # create addNumbers static method
+                Calculator.multiplyNums = staticmethod(Calculator.multiplyNums)
+
+                print('Product:', Calculator.multiplyNums(15, 110))
+
+                # output : 125
+
