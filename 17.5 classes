@@ -1,69 +1,74 @@
 __str__ vs __repr__ functions
 
-__str__ : readable format
-__repr__ : printable format of object or compute the “official” string representation of an object 
+            __str__ : readable format
+            __repr__ : printable format of object or compute the “official” string representation of an object 
 
 
-class Car:
-    def __init__(self,color,brand):
-        self.brand = brand
-        self.color = color
+            class Car:
+                def __init__(self,color,brand):
+                    self.brand = brand
+                    self.color = color
 
-    # __str__ is used for readable
-    def __str__(self):
-        return 'brand',self.brand,':','color',self.color
+                # __str__ is used for readable
+                def __str__(self):
+                    return 'brand',self.brand,':','color',self.color
 
-    # __repr__ compute the “official” string representation of an object
-    #  (a representation that has all information about the abject)
-    def __repr__(self):
-        return f'Car({self.color,self.brand})'
-
-
-c = Car('yellow','toyota')
-print(c.__str__())
-print(c.__repr__())
+                # __repr__ compute the “official” string representation of an object
+                #  (a representation that has all information about the abject)
+                def __repr__(self):
+                    return f'Car({self.color,self.brand})'
 
 
-*******************************************************************
+            c = Car('yellow','toyota')
+            print(c.__str__())
+            print(c.__repr__())
 
-__setattr__ and __getattr__ functions
-
-to create new attributes for an object use : __setattr__ # specific to current object, not shared to other objects
-to get value of an existing attribute : __getattr__ 
-
-
-class Car:
-    def __init__(self,brand):
-        self.brand = brand
-
-c = Car('toyota')
-print('brand',c.__getattribute__('brand'))
-
-# creating new attribute for Car
-c.__setattr__('color','black')
-print('color',c.__getattribute__('color'))
-
-# output : 
-
-brand toyota
-color black
+            output : 
+            ('brand', 'toyota', ':', 'color', 'yellow')
+            Car(('yellow', 'toyota'))
 
 
-*****************************************************************************
+---
 
-__format__ function :
 
-class Car:
-    def __init__(self,brand,color):
-        self.brand = brand
-        self.color = color
+#### __setattr__ and __getattr__ functions
 
-    def __format__(self, format_spec):
-        return f'the brand of car is {self.brand} and color is {self.color}'
+                to create new attributes for an object use : __setattr__ # specific to current object, not shared to other objects
+                to get value of an existing attribute : __getattr__ 
 
-c = Car('toyota','blue')
-print(c.__format__(c))
 
-# output  : the brand of car is toyota and color is blue
+                class Car:
+                    def __init__(self,brand):
+                        self.brand = brand
 
-***************************************************************
+                c = Car('toyota')
+                print('brand',c.__getattribute__('brand'))
+
+                # creating new attribute for Car
+                c.__setattr__('color','black')
+                print('color',c.__getattribute__('color'))
+
+                # output : 
+
+                brand toyota
+                color black
+
+
+---
+
+#### __format__ function :
+
+                class Car:
+                    def __init__(self,brand,color):
+                        self.brand = brand
+                        self.color = color
+
+                    def __format__(self, format_spec):
+                        return f'the brand of car is {self.brand} and color is {self.color}'
+
+                c = Car('toyota','blue')
+                print(c.__format__(c))
+
+                # output  : the brand of car is toyota and color is blue
+
+
