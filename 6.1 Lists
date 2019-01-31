@@ -197,3 +197,15 @@ append vs extend :
 		gives you: [1, 2, 3, 4, 5]
 
 ---
+
+reversed list using slicing : 
+
+
+		l = ['file1', 'file2', 'file3', 'file4']
+
+		print(l[::-1])	# -1 will reversed order where 1 doesn't maintains same order
+
+		output : ['file4', 'file3', 'file2', 'file1']
+
+
+-----
