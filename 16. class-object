@@ -5,6 +5,7 @@ Class instances can also have methods (defined by its class) for modifying its s
 
 class Car:
     '''simple class'''
+    # becomes static variables
     brandName = 'Toyota'            # brandname and modelNumber are class variables , will be discussed later
     modelNumber = 234
 
@@ -29,7 +30,7 @@ print(car.carInfo())
 
 ***********************************************************************************
 
-___init()__ function:
+__init()__ function:
 The instantiation operation (“calling” a class object) creates an empty object. 
 Many classes like to create objects with instances customized to a specific initial state. 
 Therefore a class may define a special method named __init__(), like this.
@@ -49,6 +50,7 @@ car = Car()
 # output : car object created
 
 ************************************************************************************
+
 using __init__ function to initialize ojbect properties
 
 class Car:
