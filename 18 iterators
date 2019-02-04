@@ -14,7 +14,7 @@ Ex :
 words = {'coffee':'hot beverage','red bul':'energy drink'}
 it = iter(words)
 
-print(it.__next__())
+print(it.__next__())    #returns only keys
 print(it.__next__())
 
 
