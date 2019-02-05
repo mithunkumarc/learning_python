@@ -155,25 +155,25 @@ ValueError: invalid literal for int() with base 10: 'one'
 
 user defined exception and using finally statment
 
-def withDrawMoney(amount):
-    balance = 10000
-    if amount > balance:
-        raise InsufficientMoney
-    else:
-        balance = balance - amount
-        print(f'withdraw {amount} successfull')
-    return balance
+        class NoMoneyFoundException(Exception):
+            def __init__(self,message):
+                self.message = message
 
+            def __str(self):
+                return f'NoMoneyFoundException : {message}'
 
-class InsufficientMoney(BaseException):
-    pass
+        def withdraw(amount):
+            balance = 1000
+            if amount > balance:
+                raise NoMoneyFoundException('amount must be less than balance')
+            else:
+                balance = balance - amount
+                return f'transaction successfull : remaining balance is {balance}'
 
-try:
-    withDrawMoney(25000)
-except InsufficientMoney:
-    print("send amount less than balance")
-finally:
-    print('thank you for using our services')
-
-
+        try:
+            print(withdraw(1001))
+        except NoMoneyFoundException as nm:
+            print(str(nm))
+        finally:
+            print('thank you for using our services')
 
