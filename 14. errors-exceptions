@@ -33,12 +33,25 @@ division(10,0)
 ****************************************************************************************************
 handling exception : use try , except keywords to handle exception
 
+# print exception message
+
+def divide(num,den):
+    return num/den
+
+try:
+    divide(5/0)
+except Exception as e:
+    print(str(e))               # prints message
+
+---
+
 def division(numerator, denominator):
     return numerator/denominator
 
 try:
     division(10/0)
-except ZeroDivisionError:
+except ZeroDivisionError as z:
+    print(str(z))
     print('denominator must not be zero')
     
     
