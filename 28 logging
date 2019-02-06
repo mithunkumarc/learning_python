@@ -4,6 +4,7 @@
 # if logging level set to ERROR, only ERROR and CRITICAL log levels are printed
 # if logging level set to CRITICAL, only CRITICAL log levels are printed 
 # if you do not set logging level in basic config,  default logging level is WARNING
+# use logging.getlogger('user_defined_logger_name') to use user defined logger name instead of root
 
       import logging
       logging.basicConfig(level=logging.DEBUG)
@@ -30,7 +31,7 @@ logging.warning('Warning:config file %s not found', 'server.conf')
 logging.error('Error occurred')
 logging.critical('Critical error -- shutting down')
 
-logger = logging.getLogger('test')
+logger = logging.getLogger('test')  # changing logger name from root to test
 print(logger.name) # prints test
 
 
