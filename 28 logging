@@ -1,3 +1,20 @@
+# if logging level set to DEBUG, all log levels will be printed on console
+# if logging level set to INFO, all log levels will be printed on console except DEBUG
+# if logging level set to WARNING, only WARNING, ERROR and CRITICAL log levels are printed
+# if logging level set to ERROR, only ERROR and CRITICAL log levels are printed
+# if logging level set to CRITICAL, only CRITICAL log levels are printed 
+# 
+
+      import logging
+      logging.basicConfig(level=logging.DEBUG)
+      logging.debug('Debugging information')
+      logging.info('Informational message')
+      logging.warning('Warning:config file %s not found', 'server.conf')
+      logging.error('Error occurred')
+      logging.critical('Critical error -- shutting down')
+
+
+-----------------------------------
 import logging
 logging.basicConfig(filename='applog',
                             filemode='a',
