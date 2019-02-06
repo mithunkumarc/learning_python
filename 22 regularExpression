@@ -1,3 +1,20 @@
+for demo
+
+            # individual match    
+            import re
+            lazy match
+            pattern = re.compile(r'h.+?l')
+            print(pattern.match('hello'))
+
+            # all match with position
+            pattern = re.compile(r'(\d){2}')
+            matches = re.finditer(pattern,'hello34world45python2tkiner33')
+            for m in matches:
+                print(m)
+
+
+
+--------------------------------------------------------
 .  (Dot.) In the default mode, this matches any character except a newline.
 
 
