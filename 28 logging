@@ -3,7 +3,7 @@
 # if logging level set to WARNING, only WARNING, ERROR and CRITICAL log levels are printed
 # if logging level set to ERROR, only ERROR and CRITICAL log levels are printed
 # if logging level set to CRITICAL, only CRITICAL log levels are printed 
-# 
+# if you do not set logging level in basic config,  default logging level is WARNING
 
       import logging
       logging.basicConfig(level=logging.DEBUG)
@@ -15,6 +15,8 @@
 
 
 -----------------------------------
+# logging to file
+
 import logging
 logging.basicConfig(filename='applog',
                             filemode='a',
