@@ -97,6 +97,33 @@ s = lambda x:function(x)
 
 print(5)
 
+
+
 *******************************************************************************************
 
+sum([1,2,3]) : sum of all elements
 
+*******************************************************************************************
+
+Partial functions allow us to fix a certain number of arguments of a function and generate a new function.
+
+
+    from functools import partial
+
+    def install_os(mode,os):
+        print(f'installing {os} in mode {mode}')
+
+    install = partial(install_os, 'usb')
+    install('windows')
+
+# NetSalary = GrossSalary - IncomeTax - PublicProvidentFund - ProfessionalTax
+
+    def calculate_netsalary(income_tax,proffessional_tax, public_provident_fund,gross_salary):
+        return gross_salary - income_tax - proffessional_tax - public_provident_fund
+
+    netsalary = partial(calculate_netsalary, 1000, 500,2000)
+    print(f'net salary {netsalary(50000)}')
+    print(f'net salary {netsalary(40000)}')
+
+
+******************************************************************************************
