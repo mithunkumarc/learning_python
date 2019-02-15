@@ -30,3 +30,7 @@ only imported module pyc files are generated
 ---
 
 #### check interpreter version to use latest features, set latest interpreter in editor
+
+
+---
+#### weak reference tutorial : https://pymotw.com/3/weakref/
