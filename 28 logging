@@ -65,3 +65,26 @@ New loggers are created with the getLogger() function.
 The function call logging.getLogger('debug0.x') creates a logger x which is a child of debug0 which itself is a child of the root logger. 
 When logging to this logger, it will pass on the message to its parent, and its parent will pass the message to the root logger. 
 You configured the root logger to log to a file by the basicConfig() function, so your message will end up there.
+
+
+------------------------------------------------
+example for : warning, error and critical
+
+            import logging
+
+            secured_card = False    //warning
+            internet = True
+            def atm(amount):
+                    if internet != True:        //critical
+                        logging.critical('server down')
+                        return
+                    balance = 1000    
+                    if amount > balance:              //error
+                        logging.error('insufficient amount')
+                        return
+                    if secured_card == False:
+                        logging.warning('replace with new card')
+
+
+            atm(500)
+
