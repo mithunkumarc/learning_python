@@ -34,3 +34,7 @@ only imported module pyc files are generated
 
 ---
 #### weak reference tutorial : https://pymotw.com/3/weakref/
+
+
+---
+#### python  : pip3 install MySQL-connector-python , for new mysql version
