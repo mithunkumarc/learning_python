@@ -155,3 +155,19 @@ print(__package__)
 
 
 *************************************************************
+Module importing from third module with the help of second module
+
+
+if our module A imports var/fun/class from other module B, module B might have imported from another modules
+
+tiger module : sound()
+
+lion module : from tiger import sound
+
+wild_animal module : import lion : gets sound()
+
+tiger module -> lion module -> wildanimal module
+
+*******************************************************************
+
+
