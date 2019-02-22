@@ -30,6 +30,7 @@ print(random.randrange(10,20,3))
 #output : possible output 10,13,16,19
 
 ******************************************************************************************************
+
 randint()
 
 
@@ -39,7 +40,22 @@ r = random.randint(0, 9)
 print(r)
 # output : any numer between 0 and 9
 
+
+**************************************************************************************************
+
+
+
+
+    random.randint(a, b) : random number may lie between : a <= N <= b
+
+    randrange(a, b) : random number may lie between : a <= N < b    # to include last number as randome number use (b+1)
+
+    
+
+
+
 ********************************************************************************************************
+
 choice()
 
 import random
@@ -47,6 +63,8 @@ import random
 # Generate a random string from the list of strings
 print(random.choice( ['Python', 'C++', 'Java'] ))
 # output : any string among above mentioned strings
+
+
 
 *********************************************************************************************************
 shuffle()
@@ -64,7 +82,7 @@ print(mylist)
 
 sample()
 
-he sample() function randomly 
+The sample() function randomly 
 selects N items from a given collection (list, tuple, string, dictionary, set) and returns them as a list.
 
 
