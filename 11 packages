@@ -146,12 +146,32 @@ print(list)
 
 ******************************************************************
 
+Forest
+    tree.py
+    animal
+        tiger.py
+        lion.py
+    birds
+        pigeon.py
+        parrot.py
 
 
+import module from same package
 
 
+    .    :  same dirctory
+    ..   :  parent directory
+    ..intra_package_name : another package in same directory
+
+tiger.py
+from . import lion              // import from same directory
+
+tiger.py                        // import parent package/directory
+from .. import tree
 
 
+tiger.py                        // intra package import
+from ..birds import parrot
 
 
         
