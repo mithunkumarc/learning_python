@@ -43,6 +43,31 @@ eg : looking for gadag
 
 
 
+
+
+------------------------------------------------------
+
+sub : replace, 
+
+input = 'abc123'
+result = re.sub('abc',  'def', input)           # Replace pattern abc -> def
+print(result)
+
+--------------------------------------------------
+
+split : output : list
+
+input = 'hello-world-python'
+result  = re.split(r'-',input)
+print(result)
+
+------------------------------------------------------
+
+search : 
+
+print(re.search(r'(hello)','helloworld'))# match object
+
+
 --------------------------------------------------------
 .  (Dot.) In the default mode, this matches any character except a newline.
 
