@@ -12,6 +12,35 @@ for demo
             for m in matches:
                 print(m)
 
+-------------------------------------------------------
+
+finditer vs findall
+finditer : return position/location of matching pattern
+findall : returns matching pattern
+
+eg : looking for gadag
+
+                        import re
+                        pattern = re.compile(r"\w+(gadag)\w+")
+                        test_data = '''
+                        vinaygadag123
+                        hellohello
+                        hihellohi
+                        gadag
+                        '''
+
+                        matches = pattern.finditer(test_data)
+                        for i in matches:
+                            print(i)
+
+                        matches = pattern.findall("hi vinaygadag123")
+                        for i in matches:
+                            print(i)
+
+                        output : 
+                        finditer : <_sre.SRE_Match object; span=(1, 14), match='vinaygadag123'>
+                        findall : gadag
+
 
 
 --------------------------------------------------------
