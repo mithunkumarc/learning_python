@@ -75,6 +75,50 @@ print(t)
 
 * to list all timezones : print(pytz.all_timezones)
 
+************************************************************************
+
+display local time : indian time
+
+
+# import pytz
+# import datetime
+# import pytz
+# print(pytz.all_timezones)
+# t = pytz.timezone('Asia/Kolkata').localize(
+#         datetime.datetime.now())
+# print(t)
+
+*********************************************************
+
+displaying utc and local time 
+
+
+
+# current utc time
+# import datetime
+# print(datetime.datetime.utcnow())
+
+
+# utc to indian time
+# import datetime
+# import pytz
+#
+# utc_now = pytz.utc.localize(datetime.datetime.utcnow())
+# pst_now = utc_now.astimezone(pytz.timezone("Asia/Kolkata"))
+# print('utc ',utc_now)
+# print('indian ',pst_now)
+
+
+
+
+
+
+
+
+******************************************************************
+
+
+
 ************************************************************************************************************
 universal time zone to regional time zone
 
