@@ -22,9 +22,18 @@
 
 
 
-# ascii() : prints string representation of ascii but skips non ascii characters
+#### ascii() : prints string representation of ascii but skips non ascii characters
 
 
             print("is")# output : is : i and s are ascii characters
             print(ascii("ö is"))# '\xf6 is' : ö is a non ascii and skipped
             print(ascii("√ is"))# '\u221a is' 
+
+
+#### bin(number) : return binary format : return type string. prefixed with 0b
+
+            print(bin(23)) # 0b10111
+            print(bin(-34)) # -0b100010
+            
+            
+            
