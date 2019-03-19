@@ -22,3 +22,9 @@
 
 
 
+# ascii() : prints string representation of ascii but skips non ascii characters
+
+
+            print("is")# output : is : i and s are ascii characters
+            print(ascii("ö is"))# '\xf6 is' : ö is a non ascii and skipped
+            print(ascii("√ is"))# '\u221a is' 
