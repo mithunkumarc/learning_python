@@ -1,48 +1,52 @@
-1.open() returns a file object, and is most commonly used with two arguments: open(filename, mode).
-2.The first argument is a string containing the filename. 
-3.The second argument is another string containing a few characters describing the way in which the file will be used. 
-4.mode can be 'r' when the file will only be read, 
-5.'w' for only writing (an existing file with the same name will be erased), 
-and 
-6.'a' opens the file for appending; any data written to the file is automatically added to the end.
-doubt : 7.'r+' opens the file for both reading and writing. 
-8.The mode argument is optional; 'r' will be assumed if it’s omitted.
 
 
-#default mode read
-Example : mode : write, 'w' for only writing (an existing file with the same name will be erased)     
-# create cities file 
-    f = open('cities','w')
-    cities = ['bangalore','mysore','tumkur']
-    for city in cities:
-        f.write(city+'\n')
-    f.close()
+                1.open() returns a file object, and is most commonly used with two arguments: open(filename, mode).
+                2.The first argument is a string containing the filename. 
+                3.The second argument is another string containing a few characters describing the way in which the file will be used. 
+                4.mode can be 'r' when the file will only be read, 
+                5.'w' for only writing (an existing file with the same name will be erased), 
+                and 
+                6.'a' opens the file for appending; any data written to the file is automatically added to the end.
+                doubt : 7.'r+' opens the file for both reading and writing. 
+                8.The mode argument is optional; 'r' will be assumed if it’s omitted.
 
-Example : mode : read, 'r' when the file will only be read
-f = open('cities','r')
-for i in f.readlines():         # read() function will read single character at a time , readLine() read line by line
-    print(i)
+---
+
+                #default mode read
+                Example : mode : write, 'w' for only writing (an existing file with the same name will be erased)     
+                # create cities file 
+                    f = open('cities','w')
+                    cities = ['bangalore','mysore','tumkur']
+                    for city in cities:
+                        f.write(city+'\n')
+                    f.close()
+
+                Example : mode : read, 'r' when the file will only be read
+                f = open('cities','r')
+                for i in f.readlines():         # read() function will read single character at a time , readLine() read line by line
+                    print(i)
+
+---    
     
-    
-Example : mode w will delete old file, to udate file use mode 'a' for appending file
+                Example : mode w will delete old file, to udate file use mode 'a' for appending file
 
-f = open('cities','a')
-cities = ['itanagar','portblair','shimla']
-for city in cities:
-    f.writelines(city+'\n')
-    
-    
-Example : mode r+ used for both reading and writing into file
-f = open('cities','r+')
+                f = open('cities','a')
+                cities = ['itanagar','portblair','shimla']
+                for city in cities:
+                    f.writelines(city+'\n')
 
-# for writing
-# cities = ['itanagar','portblair','shimla']
-# for city in cities:
-#     f.writelines(city+'\n')
 
-# for reading
-# for city in f.readlines():
-#     print(city)
+                Example : mode r+ used for both reading and writing into file
+                f = open('cities','r+')
+
+                # for writing
+                # cities = ['itanagar','portblair','shimla']
+                # for city in cities:
+                #     f.writelines(city+'\n')
+
+                # for reading
+                # for city in f.readlines():
+                #     print(city)
 
 
 
@@ -50,10 +54,10 @@ f = open('cities','r+')
 
 ************************************************************
 
-printing multiple line with next line character
+                printing multiple line with next line character
 
 
-file = open('input.txt','w')
-file.writelines('\n'.join(['first line','second line']))
+                file = open('input.txt','w')
+                file.writelines('\n'.join(['first line','second line']))
 
 *************************************************************
