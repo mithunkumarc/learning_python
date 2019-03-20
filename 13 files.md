@@ -102,3 +102,16 @@
 
 
 
+#### with statement : scope of variable ends when block ends. similar to auto cleanup
+
+
+        The with statement clarifies code that previously would use 
+        try...finally blocks to ensure that clean-up code is executed. 
+        
+        
+        
+          with open("output.txt",'x') as file:
+              file.write("hello world")
+          
+          # scope of file variable ends here, so reference count declreases by 1 and autoclean up of file object may start
+        
