@@ -57,3 +57,62 @@
             # bool(None)
             print(bool(None))  # False
 
+
+#### breakpoint : tobe updated : added in 3.7
+
+
+            //example
+            
+            
+#### bytearray : array of bytes
+
+            string = "zen of python."
+            # string with encoding 'utf-8'
+            arr = bytearray(string, 'utf-8')
+            print(arr)              #   bytearray(b'zen of python.')
+            print(type(arr))        #   <class 'bytearray'>
+
+
+#### bytes : 
+            
+            # using utf-8 encoding
+            sentence = "zen of python."
+            byteString = bytes(sentence,'utf-8')
+            print(byteString)
+            print(type(byteString))
+
+            # using byte string
+            sentence = b'zen of python' #byte string
+            bytesString = bytes(sentence)
+            print(byteString)
+            print(type(byteString))
+
+
+#### bytes vs bytearray
+
+
+                bytes objects are immutable sequences of single bytes
+
+                bytearray objects are a mutable counterpart to bytes objects.
+
+            
+
+#### callable  : returns true if object is callable
+            
+            # callable ojbect : implemented dunder method __call__()
+            # allows us to operate on object same way as function
+            # object can be used as function
+
+            class Person():
+              pass
+
+            print(callable(Person())) # False
+
+            class Employee():
+              def __call__(self, *args, **kwargs):
+                  print("i am callable")
+
+            print(callable(Employee())) # True
+            
+
+
