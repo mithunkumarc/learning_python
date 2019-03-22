@@ -35,5 +35,25 @@
             print(bin(23)) # 0b10111
             print(bin(-34)) # -0b100010
             
-            
-            
+
+#### bool() : 
+
+            print(bool(True)) # True
+            print(bool(False))  # False
+
+            # bool() : returns zero for false , non zero returns true
+            print(bool(0))  # False
+            print(bool(1))  # True
+            print(bool(123)) # True
+            print(bool(-1)) # True
+            print(bool(-12)) # True
+
+            # bool() : string
+            print(bool(""))     # empty string : false
+            print(bool("True")) # Non empty string : true
+            print(bool("False")) # Non empty string : true
+            print(bool("hello")) # Non empty string : true
+
+            # bool(None)
+            print(bool(None))  # False
+
