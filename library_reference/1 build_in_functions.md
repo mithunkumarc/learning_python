@@ -116,3 +116,13 @@
             
 
 
+#### chr() :  Return the string representing a character whose Unicode code point is the integer i.
+
+            print(chr(97)) # a
+            print(chr(98)) # b
+            print(chr(1_114_111))
+            # char rangle : 1 to 1_114_111
+            # a
+            # value error outside 1_114_111
+            # print(chr(1_114_112)) # error
+
