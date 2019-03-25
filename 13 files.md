@@ -102,7 +102,9 @@
 
 
 
-#### with statement : scope of variable ends when block ends. similar to auto cleanup
+#### with statement : scope of variable ends when block ends. similar to auto cleanup/autocloseble
+#### similar to try with resources in java,  autoclose at end
+
 
 
         The with statement clarifies code that previously would use 
