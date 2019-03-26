@@ -71,3 +71,12 @@
             args=[Call(func=Attribute(value=Str(s='{} likes {}'), attr='format', ctx=Load()), 
             args=[Name(id='name', ctx=Load()), Name(id='fruit', ctx=Load())], keywords=[])], keywords=[]))], orelse=[])])
 
+
+#### When to use Python AST Module?
+
+      Many automation testing tools, code coverage tools relies on the power of the Abstract Syntax Trees 
+      to parse the source code and find the possible flaws and errors in the code. Apart from this, ASTs are also used in:
+
+    Making IDEs intelligent and making a feature everyone knows as intellisense.
+    Tools like Pylint uses ASTs to perform static code analysis
+    Custom Python interpreters
