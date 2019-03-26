@@ -62,3 +62,27 @@
             print(list({1,2,3})) # set to list
             
             
+#### map(function,iterable) : higer oder function
+
+            covered
+            
+#### max(*args,key=function) : 
+
+                  print(max([1,2,3])) # output : 3
+                  
+                  #print(max([1,2,3,"hello"])) # not supported between int and string
+                  print(max({1,2,3})) #  output : 3
+                  print(max({1:"name",2:"age",3:"address"})) # maximum index, output 3
+                  print(max(1,2,3)) # tuple : output 3
+
+                  class Person:
+                      def __init__(self,id):
+                          self.id = id
+
+                  p1 = Person(11)
+                  p2 = Person(22)
+                  p3 = Person(33)
+                  max_id_person = max(p1,p2,p3,key=lambda x : x.id)
+                  print(max_id_person.id) # output : 33
+                  
+                  
