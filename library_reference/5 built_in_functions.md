@@ -148,3 +148,9 @@
             print(x.name)
             x.name = 'Diesel'
             del x.name
+
+            output : 
+            Getting name
+            Peter
+            Setting value Diesel
+            Deleting name
