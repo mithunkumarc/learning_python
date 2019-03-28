@@ -75,8 +75,8 @@
 
 
 #### property() : In Python, the main purpose of Property() function is to create property of a class. (similar to c# property)
-
-
+#### better way to setter and getter
+                        
 
               # Person class 
               class Person:
@@ -112,3 +112,39 @@
               # rajat
               # Setting name vijay
               # Deleting name
+
+
+#### property using decorator : 
+
+            #### Python program to explain property()
+            #### function using decorator
+
+            class Person:
+                def __init__(self, name):
+                    self._name = name
+
+                # getting the values
+                @property
+                def name(self):
+                    print('Getting name')
+                    return self._name
+
+                # setting the values
+                @name.setter
+                def name(self, name):
+                    print('Setting value ' + name)
+                    self._name = name
+
+                # deleting the values
+                @name.deleter
+                def name(self):
+                    print('Deleting name')
+                    del self._name
+
+                # name of all property functions are same as property
+
+
+            x = Person('Peter')
+            print(x.name)
+            x.name = 'Diesel'
+            del x.name
