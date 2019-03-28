@@ -40,6 +40,9 @@
 
             print(bool(True)) # True
             print(bool(False))  # False
+            
+            print(bool(NotImplemented))       #  True
+
 
             # bool() : returns zero for false , non zero returns true
             print(bool(0))  # False
