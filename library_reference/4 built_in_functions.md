@@ -86,3 +86,37 @@
                   print(max_id_person.id) # output : 33
                   
                   
+#### memoryview : Return a “memory view” object created from the given argument.  :incomplete
+
+            memoryview objects allow Python code to access the internal data of an object 
+            that supports the buffer protocol without copying.
+            
+            # object(data) stored as bytes in memory
+            # memoryview allows us to view internal data of object(memory)
+            # memoryview : the condition is object must have been stored as bytes
+
+
+            A memoryview supports slicing and indexing to expose its data. 
+            One-dimensional slicing will result in a subview:
+
+            v = memoryview(b'abcefg')           # memoryview : supports only byte form of data
+            print(v[1])             #98(viewing first element)
+            print(v[-1])            #103
+            print(v[1:4])           #<memory at 0x7f3ddc9f4350>
+            print(bytes(v[1:4]))    #b'bce' (reading in original form)
+
+
+            rList = [1, 2, 3, 4, 5]
+            arr = bytearray(rList)  # converting to bytes
+            # now arr is eligible for memoryview            
+            mem_view = memoryview(arr)
+            print(mem_view.tolist())      # [1, 2, 3, 4, 5] : original form
+            print(mem_view.tobytes())     # b'\x01\x02\x03\x04\x05'
+            # object to bytes example is needed
+            
+            
+            
+            ### note : object to byte : example needed
+            
+            
+            
