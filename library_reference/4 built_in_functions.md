@@ -119,4 +119,17 @@
             ### note : object to byte : example needed
             
             
-            
+#### min : 
+
+            print(min(3,4,5))       #   3
+            print(min(12,34,5,6))   #   5
+            print(min('hello world','hi python','hai',key= len))    #   hai
+            print(max('hello world','hi python','hai',key= len))    #   hello world
+
+            # example 2 : with iterable
+            def divide(number):
+                return number/2
+
+            num = [15, 300, 2700, 821, 52, 10, 6]
+            print('Minimum is:', min(num, key=divide)) #Minimum is: 6
+
