@@ -71,6 +71,8 @@
                 print(type([1,2,3])) # list
                 print(type({})) # dict
                 print(type(set({}))) # set
+                print(type(NotImplemented))
+
 
                 class Employee:
                     pass
@@ -84,7 +86,7 @@
                 # <class 'dict'>
                 # <class 'set'>
                 # <class '__main__.Employee'>
-                
+                # <class 'NotImplementedType'>
 
 
 #### vars() : displays module attributes with variables in dict form
