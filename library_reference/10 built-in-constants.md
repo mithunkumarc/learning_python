@@ -30,3 +30,33 @@
 
 
           print(bool(NotImplemented)) # True
+
+
+#### Ellipsis : The same as the ellipsis literal “...”. 
+
+          print(type(Ellipsis))   # <class 'ellipsis'>
+
+          # literal value of ellipsis is ...
+          print(type(...))        # <class 'ellipsis'>
+
+          a = ...
+          print(a) # Ellipsis
+
+
+
+          # infinite data cant be displayed represented as ...
+          # similar to reflection of glass opposite to each other
+          a = [0]
+          b = [0]
+          a[0], b[0] = b, a   # a[0] -> b where b[0] -> a where a[0] -> b  ... soon
+          print(a)
+          print(b)
+
+          # [[[...]]]
+          # [[[...]]]
+
+          # The variables a and b themselves aren't ' \
+          # even "things" themselves, and they themselves are also merely pointers
+          # to otherwise anonymous "things" in memory.
+
+          # a -> [b] -> [[a]] -> [[[b]]] -> [[[[a]]]]
