@@ -30,3 +30,14 @@
             c = 100
             print(a == c)   # True
             print(a is c)   # True
+
+
+#### complex.conjugate() : Return the complex conjugate of its argument. (3-4j).conjugate() == 3+4j.
+
+            c = complex(-4,5)
+            print(c)                # (-4+5j)
+            print(c.conjugate())    # (-4-5j)
+            
+
+
+            
