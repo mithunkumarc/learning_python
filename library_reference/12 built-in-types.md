@@ -16,19 +16,19 @@
 #### multiplication
 
 
-        s * n or n * s 	equivalent to adding s to itself n times 	(2)(7)
+        s * n or n * s 	equivalent to adding s to itself n times 	
 
 #### index
 
-        s[i] 	ith item of s, origin 0 	(3)
+        s[i] 	ith item of s, origin 0 	
 
 #### slice
 
-        s[i:j] 	slice of s from i to j 	(3)(4)
+        s[i:j] 	slice of s from i to j 	
 
 #### slice
 
-        s[i:j:k] 	slice of s from i to j with step k 	(3)(5)
+        s[i:j:k] 	slice of s from i to j with step k 	
 
 #### length
 
