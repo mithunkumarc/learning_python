@@ -69,8 +69,8 @@
           # hash value must not change, because it being used as index
           # hash value depends on the content of object
           # if there is a change in content thay may affect hashvalue
-          # so only immutalbe objects can have hashvalue
-          # immutalbe objects can be called as hashable objects
+          # so only immutable objects can have hashvalue
+          # immutable objects can be called as hashable objects
           
           l = (1,2,3)
           print(id(l))
