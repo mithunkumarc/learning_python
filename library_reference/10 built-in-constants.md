@@ -26,3 +26,7 @@
             
             
             
+#### truth value of NotImplemented is true
+
+
+          print(bool(NotImplemented)) # True
