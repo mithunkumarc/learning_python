@@ -95,5 +95,32 @@
                 demo = A.B.C()
                 demo.me()
 
-            
-            
+
+
+#### class.__mro__ : 
+
+    class.__mro__
+    
+    This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
+
+
+
+                class A(object):
+                    x = 10
+
+
+                class B(A):
+                    pass
+
+                class C(A):
+                    x = 15
+
+                class D(B, C):
+                    pass
+
+                d = D()
+
+                print(D.__mro__)
+                
+         output :       
+         (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
