@@ -8,6 +8,7 @@
 
 #### object.__dict__ : A dictionary or other mapping object used to store an object’s (writable) attributes.
             
+            # object.__dict__
             
             __dict__ is readonly, but it will list out properties(of object) which are writable
             
@@ -36,6 +37,8 @@
             
 ####  instance.__class__: to which class it belongs to
 
+            # instance.__class__
+            
             class Person:
                 def __init__(self,name,age):
                     self.name = name
@@ -46,8 +49,10 @@
             # output : <class '__main__.Person'>
 
 
-####  class.__bases__: The tuple of base classes of a class object.
+####  class.__bases__ : The tuple of base classes of a class object.
 
+            # class.__bases__
+            
             class Automobile:
                 pass
             class Vehicle:
@@ -60,8 +65,9 @@
             
 
 #### definition.__name__ : The name of the class, function, method, descriptor, or generator instance.
-
-
+                
+            # definition.__name__    
+        
             class Automobile:
                 def move(self):
                     print("move")
@@ -72,6 +78,22 @@
             print(a.move.__name__) # move : name of method
             print(__name__) # __main__ : module name in current context
             
-            
+
+####  definition.__qualname__
+
+        definition.__qualname__:  
+        The qualified name of the class, function, method, descriptor, or generator instance.
+
+                class A:
+                    class B:
+                        class C:
+                            def me(self):
+                                print('__name__',type(self).__name__)           # output : __name__ : C
+                                print('__qualname__',type(self).__qualname__)   # output : __qualname__ A.B.C
+
+
+                demo = A.B.C()
+                demo.me()
+
             
             
