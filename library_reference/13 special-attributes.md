@@ -152,3 +152,17 @@
 
                 print(A.__subclasses__()) # direct subclasses
                 # [<class '__main__.B'>, <class '__main__.C'>]
+
+
+
+#### __module__ :  	The name of the module the function was defined in, or None if unavailable.
+
+                class Person:
+                    pass
+
+                print(Person.__module__) # __main__ : when current module executed
+                p = Person()
+                print(p.__module__) # __main__ : when current module executed
+
+                from calculator import add
+                print(add.__module__) # calculator
