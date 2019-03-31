@@ -97,11 +97,14 @@
 
 
 
-#### class.__mro__ : 
+#### class.__mro__ and class.mro() :  
 
-    class.__mro__
+    class.__mro__ and class.mro()
     
     This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
+    
+    This method can be overridden by a metaclass to customize the method resolution order for its instances. 
+    It is called at class instantiation, and its result is stored in __mro__.
 
 
 
@@ -121,6 +124,8 @@
                 d = D()
 
                 print(D.__mro__)
+                print(D.mro())
                 
          output :       
          (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+         [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
