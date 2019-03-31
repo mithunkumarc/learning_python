@@ -129,3 +129,26 @@
          output :       
          (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
          [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+
+
+
+####  class.__subclasses__()
+                        
+                # class.__subclasses__()
+                Each class keeps a list of weak references to its immediate subclasses. 
+                This method returns a list of all those references still alive. Example:
+
+                class A:
+                    pass
+
+                class B(A):
+                    pass
+
+                class C(A):
+                    pass
+
+                class D(B):
+                    pass
+
+                print(A.__subclasses__()) # direct subclasses
+                # [<class '__main__.B'>, <class '__main__.C'>]
