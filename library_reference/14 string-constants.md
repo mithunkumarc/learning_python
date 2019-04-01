@@ -26,7 +26,7 @@
 
         print(string.whitespace)
 
-# helper function : string.capwords() : capitalize each word using str.capitalize()
+#### helper function : string.capwords() : capitalize each word using str.capitalize()
 
                 import string
                 print(string.capwords("object oriented programming"))
