@@ -33,3 +33,36 @@
 #### alternate for pickle : json
 
           # more secure and much faster than pickle.
+
+
+#### pickling and unpickling of an object
+
+                import pickle
+                class Dog:
+                    def __init__(self,name):
+                        self.name = name
+
+                dog = Dog("tex")
+
+                filename = 'dogs'
+                outfile = open(filename,'wb')# writing in binary mode
+                pickle.dump(dog,outfile)# writing obj to file
+                outfile.close()
+
+
+                # unpickling
+                infile = open(filename,'rb')
+                new_dog = pickle.load(infile)
+                infile.close()
+
+                # check data
+                print('new dog name',new_dog.name)
+                print('old dog name',dog.name)
+                print(new_dog==dog) # false because two of they point to two different copies
+                print(type(new_dog))
+
+                output : 
+                new dog name tex
+                old dog name tex
+                False
+                <class '__main__.Dog'>
