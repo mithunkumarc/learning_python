@@ -1,6 +1,7 @@
 guide link : 
 
         https://docs.scipy.org/doc/numpy/reference/
+https://docs.scipy.org/doc/numpy/reference/
 
 
 quick start tutorial : 
