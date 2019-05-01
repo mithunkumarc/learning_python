@@ -38,3 +38,13 @@ only imported module pyc files are generated
 
 ---
 #### python  : pip3 install MySQL-connector-python , for new mysql version
+
+
+--
+
+#### tobe updated 
+
+        https://www.oreilly.com/learning/20-python-libraries-you-arent-using-but-should?utm_campaign=meetedgar&utm_medium=social&utm_source=meetedgar.com&fbclid=IwAR3SHG_fg539fzxmJC9vPA1B_wIOIyPfrQb4uliTAh1Kj2sh_BeVgclq0jw
+
+
+        https://stackabuse.com/introduction-to-pythons-collections-module/
