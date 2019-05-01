@@ -22,8 +22,13 @@
         # selecting all tags with tag-item
         for block in response.xpath('//span[@class="tag-item"]'):  
             # (data : tag names)going to file json/xml  
-            yield {"selector":str(block.xpath('./a[@class="tag"]/text()').extract_first())}  
+            yield {"selector": block.xpath('./a[@class="tag"]/text()').extract_first()}  
         yield scrapy.Request()  # important to return
+        
+        
+        Note : to read selector path : below line will help you which path you are selecting
+        
+                yield {"selector":str(block.xpath('./a[@class="tag"]/text()'))}  
 
 
 #### use yield function to extract to json/xml file
@@ -41,7 +46,7 @@
     def parse(self, response):
         
         for block in response.xpath('//span[@class="tag-item"]'):
-            yield {"selector":str(block.xpath('./a[@class="tag"]/text()').extract_first())}
+            yield {"selector":block.xpath('./a[@class="tag"]/text()').extract_first()}
 
         next_page_url = response.xpath('//li[@class="next"]/a/@href').extract_first()		# eg : /page/2/
 
