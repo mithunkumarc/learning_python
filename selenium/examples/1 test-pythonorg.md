@@ -15,6 +15,7 @@
             # using Keys.ENTER or Keys.RETURN to submit search text
             elem.send_keys(Keys.RETURN)
             # confirm it has results
+            # page source : html
             assert "No results found." not in driver.page_source
             import time
             time.sleep(5)
