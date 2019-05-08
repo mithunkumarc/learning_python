@@ -12,8 +12,8 @@
 
           P = namedtuple('Point',['x','y'])
           pt = P(11, y = 12)
-          print(pt[0])
-          print(pt.y)
+          print(pt[0])   # usijng index to access 11
+          print(pt.y)    # using name to access 12
 
 
           print(pt.count(11)) # appear 1 time
