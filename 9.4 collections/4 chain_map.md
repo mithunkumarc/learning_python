@@ -1,5 +1,5 @@
-# dict-like class for creating a single view of multiple mappings
-# simlar to dictionary , but consists of multiple dictionary
+#### dict-like class for creating a single view of multiple mappings
+#### simlar to dictionary , but consists of multiple dictionary
 
         from collections import ChainMap
         a = {'a':'A','b':'B'}
