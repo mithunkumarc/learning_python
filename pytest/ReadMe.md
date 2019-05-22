@@ -21,3 +21,7 @@ pytest examples
       18.marked_meta_fixtures
       19.mocker_fixture
       20.reusable_mock_test
+
+
+
+           * move services.py into package name calld 'other_code'
