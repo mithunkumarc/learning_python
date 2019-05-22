@@ -15,3 +15,9 @@ pytest examples
       11.advance_parameter_combination
       13.special_marks
       14.mark_parametrization
+      15.class based test
+      16.advanced class test
+      17.scoped_meta_fixtures_test
+      18.marked_meta_fixtures
+      19.mocker_fixture
+      20.reusable_mock_test
