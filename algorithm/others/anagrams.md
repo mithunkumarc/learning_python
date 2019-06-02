@@ -1,13 +1,27 @@
 ### convert to list , sort and compare 
 #### using builtin fuctions
 
-        word1 = list('silent')
-        word2 = list('listen')
-        word1.sort()
-        word2.sort()
-        word1_s = ''.join(word1)
-        word2_s = ''.join(word2)
-        print(word1_s,word2_s,word1_s == word2_s)
+        def check_anagram(word1,word2):
+            #check the length of two words first
+            if len(word1) == len(word2):
+                #sort word1
+                sorted_word1 = sorted(word1)
+                #return type of sorted is list, so convert back to string
+                sorted_word1_str = ''.join(sorted_word1)
+                #sort word2
+                sorted_word2 = sorted(word2)
+                # return type of sorted is list, so convert back to string
+                sorted_word2_str = ''.join(sorted_word2)
+                #compare
+                if sorted_word1_str == sorted_word2_str:
+                    return True
+                else:
+                    return False
+            else:
+                return False
+
+        result = check_anagram("mithun","kumar")
+        print(result)
 
 
 #### without using builtin functions
