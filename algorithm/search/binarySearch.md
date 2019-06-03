@@ -12,6 +12,32 @@
 
 ---
 
+#### for binary search , first sort the list : big O : log n
+
+            def binary_search(alist,item):
+                if len(alist) == 0:
+                    return False
+                else:
+                    midpoint = len(alist)//2
+                    if alist[midpoint] == item:
+                        return True
+                    else:
+                        if item < alist[midpoint]:
+                            return binary_search(alist[:midpoint],item)
+                        else:
+                            return binary_search(alist[midpoint+1:],item)
+
+
+            elem = 33
+            l = [10,9,8,7,6,5,4,3,2,1,-1]
+            l = sorted(l)
+            print(binary_search(l,elem))
+
+
+
+
+---
+
                 def binarySearch(alist, item):
                     first = 0
                     last = len(alist) - 1
