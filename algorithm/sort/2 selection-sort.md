@@ -14,3 +14,6 @@
             print(data)
             size -= 1
         print(data)
+
+
+big O : n ^ 2
