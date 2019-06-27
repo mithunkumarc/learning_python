@@ -209,3 +209,24 @@ reversed list using slicing :
 
 
 -----
+
+# sort list with respect to name
+
+		class Person:
+		    def __init__(self,name):
+			self.name = name
+
+		    def __lt__(self, other):
+			return self.name < other.name
+
+		    def __str__(self):
+			return self.name
+
+		p1 = Person('rajat')
+		p2 = Person('anil')
+		p3 = Person('vijay')
+
+		l = [p1,p2,p3]
+		l.sort()
+		for person in l:
+		    print(person.name)
