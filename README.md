@@ -48,3 +48,18 @@ only imported module pyc files are generated
 
 
         https://stackabuse.com/introduction-to-pythons-collections-module/
+        
+        
+#### python virtual environement installation in windows
+
+        https://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/
+
+        install pip 
+        py -3 -m ensurepip
+
+        install virtual env
+        pip -m venv env
+        pip install virtualenvwrapper-win
+        mkvirtualenv <projectname>
+        pip install django
+        pip install djangorestframework
