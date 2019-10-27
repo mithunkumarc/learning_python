@@ -63,3 +63,5 @@ only imported module pyc files are generated
         mkvirtualenv <projectname>
         pip install django
         pip install djangorestframework
+        
+        https://www.django-rest-framework.org/tutorial/quickstart/
