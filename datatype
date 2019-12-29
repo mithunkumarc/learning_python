@@ -221,3 +221,9 @@ all functions of above classes creants new instances.
 
 
 
+*********************************************************************
+
+type is also : builtin datatype
+>>> type(type(1))
+<class 'type'>
+
