@@ -67,3 +67,7 @@ only imported module pyc files are generated
         pip install djangorestframework
         
         https://www.django-rest-framework.org/tutorial/quickstart/
+        
+#### to see list of installed packages
+
+        pip freeze
