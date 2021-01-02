@@ -71,3 +71,7 @@ only imported module pyc files are generated
 #### to see list of installed packages
 
         pip freeze
+
+#### read
+
+        http://csgordon.github.io/books.html
