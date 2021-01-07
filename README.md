@@ -84,5 +84,6 @@ only imported module pyc files are generated
 #### explore
 
         https://github.com/Apress
+        https://github.com/PacktPublishing
 
             
