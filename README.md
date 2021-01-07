@@ -80,3 +80,9 @@ only imported module pyc files are generated
 #### asynchronous 
         
         https://github.com/Apress/asynchronous-programming-python
+        
+#### explore
+
+        https://github.com/Apress
+
+            
