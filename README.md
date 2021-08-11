@@ -1,3 +1,9 @@
+# Blogs watchout.  
+Jvns.ca link.   
+danluu.com link. 
+
+
+
 # python
 
 while installing : in the beginning select checkbox to set path : pip will be by default included
