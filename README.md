@@ -81,6 +81,10 @@ only imported module pyc files are generated
 #### read
 
         http://csgordon.github.io/books.html
+        
+#### todo
+
+        https://runestone.academy/ns/books/published/pythonds3/index.html
 
 
 #### asynchronous 
