@@ -2,6 +2,9 @@
 Jvns.ca link.   
 danluu.com link. 
 
+#### todo
+
+        https://docs.python.org/3/glossary.html
 
 
 # python
