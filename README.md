@@ -102,5 +102,6 @@ only imported module pyc files are generated
 
         https://github.com/Apress
         https://github.com/PacktPublishing
+        https://github.com/PacktPublishing/Mastering-Concurrency-in-Python
 
             
