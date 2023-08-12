@@ -92,6 +92,8 @@ only imported module pyc files are generated
 #### todo
 
         https://runestone.academy/ns/books/published/pythonds3/index.html
+        https://www.youtube.com/@ArjanCodes
+        https://github.com/ArjanCodes
 
 
 #### asynchronous 
