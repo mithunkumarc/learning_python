@@ -11,38 +11,33 @@ danluu.com link.
         https://docs.python.org/3/howto/index.html
 
 
-# python
+# while installing python, allow installer to set path
 
-while installing : in the beginning select checkbox to set path : pip will be by default included
+        while installing : in the beginning select checkbox to set path : pip will be by default included
 
-compiler : checks sytax : generates pyc files
+#### compiler
 
-interpreter : executes pyc files
+        : checks sytax : generates pyc files
 
----
+#### interpreter
 
-in scripting languages interpreter does most of things
+        : executes pyc files
 
----
-
-compiled language : source code to machine code
-
-interpreter : executes machine code
-
----
-
-python compiler : sourece code to byte code
-
-interpreter : byte code to machine code and executes : so python considered as scripting lang
+#### compiler vs interpreter
+        
+        > in scripting languages interpreter does most of things
+        python compiler : sourece code to byte code        
+        > compiled language : source code to machine code
+        
+        interpreter : executes machine code
+        interpreter : byte code to machine code and executes : so python considered as scripting lang
 
 
----
+        pyc file of directly executed module will not be generated.
 
-pyc file of directly executed module will not be generated.
+        only imported module pyc files are generated
 
-only imported module pyc files are generated
 
----
 
 #### check interpreter version to use latest features, set latest interpreter in editor
 
@@ -94,6 +89,7 @@ only imported module pyc files are generated
         https://runestone.academy/ns/books/published/pythonds3/index.html
         https://www.youtube.com/@ArjanCodes
         https://github.com/ArjanCodes
+        https://github.com/ArjanCodes/betterpython
 
 
 #### asynchronous 
