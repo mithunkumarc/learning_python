@@ -110,3 +110,8 @@ danluu.com link.
         2. sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
         3. sudo apt install python3.11-dev python3.11-venv python3.11-distutils python3.11-gdbm python3.11-tk python3.11-lib2to3
         youtube link : https://www.youtube.com/watch?v=w7v4CZt1po8
+
+#### practice with oops
+
+        log
+        database connection
