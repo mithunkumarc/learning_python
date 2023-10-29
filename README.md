@@ -1,6 +1,12 @@
 # Blogs watchout.  
-Jvns.ca link.   
-danluu.com link. 
+
+        Jvns.ca link.   
+        danluu.com link. 
+
+
+#### style guide
+
+        https://peps.python.org/pep-0008/
 
 #### todo
 
