@@ -1,5 +1,5 @@
 # Blogs watchout.  
-
+ 
         Jvns.ca link.   
         danluu.com link. 
 
